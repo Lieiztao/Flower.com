@@ -474,7 +474,7 @@
             height: 100%;
             // background: red;
             li{ 
-                float: left;
+                // float: left;
                :first-child{
                 width: 216px;
                }
@@ -496,7 +496,7 @@
                     margin-left: 2px;
                     margin-right: 6px;
                     display: inline-block;
-                    background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+                    background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
                     background-repeat: no-repeat;
                     vertical-align: top;
                 }
@@ -526,27 +526,36 @@
         width: 1200px;
         margin: 30px auto 60px;
         font-size: 0;
-        
-        .scene-list{
+        .img{
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        >.scene-list{
             float: left;
             width: 288px;
             border-radius: 8px;
             overflow: hidden;
+            +.scene-list{
+                margin-left: 16px;
+            }
             .scene-item-horizontal{
                 width: 100%;
                 border-radius: 8px;
                 overflow: hidden;
-                +.scene-item-horizontal{
-                    margin-top: 16px;
-                }
-                .scene-item-vertical-mini{
+
+               .scene-item-vertical-mini{
                     display: inline-block;
                     width: 136px;
                     border-radius: 8px;
                     overflow: hidden;
-                    +.scene-item-vertical-mini{
-                        margin-left: 16px;
-                    }
+                    + .scene-item-vertical-mini {
+    margin-left: 16px;
+}
+
+                }
+                   
+                +.scene-item-horizontal{
+                    margin-top: 16px;
                 }
             }
             .scene-item-vertical{
@@ -554,16 +563,477 @@
                 border-radius: 8px;
                 overflow: hidden;
                 position: relative;
-                img{
-                    max-width: 100%;
-                    vertical-align: middle;
-                }
-            }
-            +.scene-list{
-                margin-left: 16px;
             }
         }
     }
     //场景  over
+
+
+    // 楼层列表
+    .fl-wrapper{
+        .fl{
+            width: 100%;
+            font-size: 0;
+            // float: left;
+            .f-server-bd{
+                width: 1200px;
+                margin: 0 auto;
+                padding-top: 40px;
+                .help-container{
+                    padding-top: 36px;
+                    padding-bottom: 40px;
+                    height: 230px;
+                    >div{
+                        float: left;
+                        li{
+                            float: left;
+                            font-size: 12px;
+                            line-height: 24px;
+                            a{
+                                color: #71797F;
+                            }
+                            
+                           
+                        }
+                        >ul{
+                            margin-top: 7px;
+                            list-style: none;
+                        }
+                        >h4{
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #232628;
+                        }
+                    }
+                    .help-server{
+                        width: 197px;
+                        ul{
+                            li{
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                width: 68px;
+                                
+                            }
+                        }
+
+                    }
+                    .help-infos{
+                        width: 225px;
+                    }
+                    .help-city{
+                        width: 197px;
+                    }
+                    .help-contact{
+                        width: 259px;
+                    }
+                    .help-city{
+                        width: 197px;
+                        ul{
+                            margin-top: 9px;
+                            li{
+                                width: 68px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    .help-contact{
+                        width: 259px;
+                        .help-contact-content{
+                            margin-top: 9px;
+                            p{
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                font-size: 12px;
+                                line-height: 20px;
+                                color: #71797F;
+                            }
+                            .help-contact-kf{
+                                width: 100px;
+                                height: 32px;
+                                margin-top: 4px;
+                                border-radius: 16px;
+                                background-color: #FF734C;
+                                font-size: 12px;
+                                line-height: 32px;
+                                color: #fff;
+                                text-align: center;
+                                a{
+                                    color: #fff;
+                                    .icon-contact{
+                                        background-position: -330px -72px;
+                                        width: 20px;
+                                        height: 20px;
+                                        margin-top: 6px;
+                                        margin-right: 6px;
+                                        display: inline-block;
+                                        background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                                        background-repeat: no-repeat;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    .help-qrcode{
+                        width: 322px;
+                        font-size: 0;
+                        text-align: right;
+                        .help-qrcode-item{
+                            display: inline-block;
+                            vertical-align: top;
+                            text-align: center;
+                            img{
+                                width: 120px;
+                                height: 120px;
+                                vertical-align: middle;
+                            }
+                            p{
+                                margin-top: 8px;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #232628;
+                            }
+                            +.help-qrcode-item{
+                                margin-left: 48px;
+                            }
+                        }
+                    }
+                } 
+                    .articles{
+                            width: 100%;
+                            background-color: #fff;
+                                .articles-hd{
+                                    height: 53px;
+                                    padding: 0 32px;
+                                    border-bottom: 1px solid #E9ECF0;
+                                    a{
+                                        font-size: 14px;
+                                        line-height: 52px;
+                                        color: #71797F;
+                                        float: right;
+                                    }
+                                    h4{
+                                        font-size: 20px;
+                                        line-height: 52px;
+                                        font-weight: bold;
+                                        color: #232628;
+                                    }
+                                }
+                                .articles-bd{
+                                    width: 100%;
+                                    padding: 8px 0;
+                                    .articles-list{
+                                        list-style: none;
+                                        .articles-item{
+                                            position: relative;
+                                            display: inline-block;
+                                            width: 400px;
+                                            padding-left: 42px;
+                                            font-size: 12px;
+                                            line-height: 28px;
+                                            color: #232628;
+                                        }
+                                    }
+                                }
+                        }
+                        .f-server-list{
+                            padding: 20px 0;
+                            border-bottom: 1px solid #E9ECF0;
+                            height: 201px;
+                            .f-server-item{
+                                float: left;
+                                margin: 20px 0;
+                                font-size: 20px;
+                                line-height: 40px;
+                                color: #232628;
+                                width: 1200px/4;
+                               
+                                a{
+                                    .icon {
+                                        width: 40px;
+                                        height: 40px;
+                                        margin-right: 16px;
+                                        display: inline-block;
+                                        background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+                                        background-repeat: no-repeat;
+                                        vertical-align: top;
+                                    }
+                                    .icon-server1{
+                                        background-position: 0 -136px;
+                                    }
+                                    .icon-server2{
+                                        background-position: -50px -136px;
+                                    }
+                                    .icon-server3{
+                                        background-position: -100px -136px;
+                                    }
+                                    .icon-server4{
+                                        background-position: -150px -136px;
+                                    }
+                                    .icon-server5{
+                                        background-position: -200px -136px;
+                                    }
+                                    .icon-server6{
+                                        background-position: -250px -136px;
+                                    }
+                                    .icon-server7{
+                                        background-position: -300px -136px;
+                                    }
+                                    .icon-server8{
+                                        background-position: -350px -136px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+            &:nth-child(odd) {
+                background-color: #F7F9FA;
+                
+                }
+            .fl-container {
+                width: 1200px;
+                margin: 0 auto;
+                padding: 40px 0 60px;
+               
+                // 问题头
+                .hd{
+                    .more{
+                        font-size: 14px;
+                        line-height: 30px;
+                        color: #71797F;
+                        float: right;
+                        color: #333;
+                        .icon{
+                            width: 12px;
+                            height: 12px;
+                            margin-top: 9px;
+                            margin-left: 6px;
+                            display: inline-block;
+                            background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+                            background-repeat: no-repeat;
+                            vertical-align: top;
+                        }
+                        .icon-arrow-right{
+                            background-position: -68px 0;
+                        }
+                    }
+                    h3{
+                        font-size: 26px;
+                        line-height: 30px;
+                        color: #232628;
+                        font-weight: bold;
+                        span{
+                            padding-left: 15px;
+                            margin-left: 16px;
+                            font-size: 20px;
+                            line-height: 24px;
+                            font-weight: normal;
+                            border-left: 1px solid #71797F;
+                        }
+                        
+                    }
+                    }
+                    //图片
+                    .bd{
+                            margin-top: 14px;
+                            font-size: 0;
+                            .bd-l{
+                                display: inline-block;
+                                width: 288px;
+                                vertical-align: top;
+                                .banner-box{
+                                    position:relative;
+                                    .link-cover{
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        height: 160px;
+                                        background-image: url(http://img02.hua.com/pc/pimg/home/home_linkcover.png);
+                                    }
+                                }
+                                img{
+                                    width: 100%;
+                                    vertical-align: middle;
+                                }
+                            }
+                            .fl-products{
+                                display: inline-block;
+                                width: 912px;
+                                vertical-align: top;
+                                .fl-products-item{
+                                    display: inline-block;
+                                    width: 212px;
+                                    margin-left: 16px;
+                                    margin-bottom: 16px;
+                                    background-color: #fff;
+                                    vertical-align: top;
+                                    a{
+                                        outline: none;
+                                        .img-box{
+                                            width: 100%;
+                                            height: 228px;
+                                            overflow: hidden;
+                                            img{
+                                                width: 100%;
+                                                max-width: 100%;
+                                                height: auto;
+                                                vertical-align: bottom;
+                                                text-decoration: none;
+                                            }
+                                        }
+                                        .product-content{
+                                            padding: 10px 8px 14px;
+                                            text-align: center;
+                                            color: #232628;
+                                            .product-title{
+                                            max-width: 100%;
+                                            overflow: hidden;
+                                             text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            font-size: 16px;
+                                            line-height: 20px;
+                                            }
+                                            .product-price{
+                                                margin-top: 5px;
+                                                font-size: 16px;
+                                                font-weight: bold;
+                                                line-height: 20px;
+                                                .price-sign{
+                                                    font-family: arial;
+                                                    margin-right: -4px;
+                                                }
+                                                .price-num{
+                                                    font-family: arial,Verdana,Arial;
+                                                }
+                                            }
+                                            .product-sell{
+                                                margin-top: 6px;
+                                                font-size: 12px;
+                                                color: #71797F;
+                                                line-height: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                }
+            }
+        }
+    }
+    //楼层 爱情鲜花  over
+    // 楼层列表  over
+
+
+    //尾部
+    #floor {
+        font-size: 0;
+        background-color: #232628;
+        .fl{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0 46px;
+            // 尾部导航
+            .fl-nav{ 
+                a{
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #fff;
+                    +a{
+                        padding-left: 32px;
+                        margin-left: 33px;
+                        border-left: 1px solid #fff;
+                    }
+                }
+            }
+            // 尾部导航over
+            //尾部证书
+            .fl-site{
+                margin-top: 30px;
+                p{
+                font-size: 12px;
+                color: #71797F;
+                line-height: 22px;
+                a{
+                    font-size: 12px;
+                    color: #71797F;
+                    line-height: 22px;
+                }
+                }
+            }
+            .ft-auth{
+                margin-top: 7px;
+                .icon{
+                    display: inline-block;
+                    background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                    background-repeat: no-repeat;
+                    vertical-align: top;
+                    height: 40px;
+                    margin-right: 12px;
+                } 
+                .icon-slogan{
+                    width: 149px;
+                    background-position: -518px -136px;
+                }
+                .icon-top100{
+                    width: 123px;
+                    background-position: -676px -136px;
+                }
+                a{
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                img{
+                    width: auto;
+                    height: 40px;
+                }
+                .ft-auth-border{
+                    display: inline-block;
+                    vertical-align: top;
+                    background: #fff;
+                    border-radius: 2px;
+                    margin-right: 12px;
+                    img{
+                        margin: 0 4px;
+                    }
+                }
+            }
+            // 尾部证书 over
+            //友情链接
+            .fl-link{
+                margin-top: 10px;
+                color: #71797F;
+                span{
+                    margin-right: 4px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                a{
+                    margin: 0 2px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #71797F;
+                }
+            }
+            // 友情链接 over
+        }
+    }
+    // 尾部  over
+    //弹窗链接
+    #min-window{
+        position: fixed;
+        z-index: 9;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+    }
+    //弹窗链接 Over
+
+
 }
 // 大盒子over
