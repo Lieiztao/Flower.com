@@ -1,0 +1,419 @@
+@charset 'utf-8';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#home {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+#home .site-nav {
+  min-width: 1200px;
+  height: 40px;
+  font-size: 12px;
+  background-color: #F3F5F7;
+}
+#home .site-nav .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+#home .site-nav ul {
+  display: block;
+  list-style-type: disc;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+#home .site-nav ul li {
+  float: left;
+  padding: 0 16px;
+  line-height: 40px;
+}
+#home .site-nav .site-nav-l {
+  float: left;
+}
+#home .site-nav .site-nav-r {
+  float: right;
+}
+#home > header {
+  height: 120px;
+  width: 100%;
+}
+#home > header .search-header {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+}
+#home > header .search-header .logo {
+  float: left;
+  width: 500px;
+  height: 64px;
+  margin-top: 28px;
+  background: url(http://img02.hua.com/pc/assets/img/pc_hualogo.png) left center no-repeat;
+}
+#home > header .search-header .logo .logo-nav {
+  display: inline-block;
+  width: 238px;
+  height: 60px;
+  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 -248px;
+}
+#home > header .search {
+  float: left;
+  width: 320px;
+  margin-top: 40px;
+}
+#home > header .search .input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+#home > header .search .input-group .form-control {
+  box-shadow: none;
+  padding: 6px;
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #4d4d4d;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ff6a00;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+#home > header .search .input-group .form-control:first-child {
+  border-radius: 0;
+}
+#home > header .search .input-group .input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+#home > header .search .input-group .input-group-btn .btn {
+  font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+  font-size: 16px;
+  padding: 5px 24px;
+  padding: 5px 24px 4px\0;
+  border-radius: 0;
+  position: relative;
+  color: #ffffff;
+  background-color: #ff6a00;
+  border-color: #ff6a00;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.42857143;
+  user-select: none;
+}
+#home > header .ico-phone {
+  display: block;
+  color: #ff6a00;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 35px;
+  float: right;
+}
+#home .login-wrapper {
+  width: 100%;
+  height: 474px;
+  display: block;
+  box-sizing: border-box;
+  background-image: url(http://img02.hua.com/pc/assets/img/login_bg.jpg);
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+#home .login-wrapper .container {
+  width: 1220px;
+  height: 474px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+}
+#home .login-wrapper .container .login-box {
+  position: relative;
+  width: 350px;
+  height: 438px;
+  border-radius: 8px;
+  float: right;
+  background: #fff;
+  margin-top: 18px;
+  overflow: hidden;
+}
+#home .login-wrapper .container .login-box .login-tabs {
+  position: relative;
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px #E9ECF0 solid;
+  padding: 0;
+  font-size: 0;
+  display: block;
+  box-sizing: border-box;
+  list-style: none;
+}
+#home .login-wrapper .container .login-box .login-tabs li {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  line-height: 56px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+#home .login-wrapper .container .login-box .login-tabs .active {
+  color: #FF734C;
+}
+#home .login-wrapper .container .login-box .login-tabs li.active::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  bottom: 0px;
+  left: 30px;
+  background: #FF734C;
+}
+#home .login-wrapper .container .login-box .phone {
+  display: block;
+  min-height: 280px;
+  padding: 20px 24px 0;
+  color: #737373;
+}
+#home .login-wrapper .container .login-box .phone .tel-box {
+  font-size: 13px;
+  color: #71797F;
+  height: 24px;
+  line-height: 18px;
+  text-align: right;
+  vertical-align: top;
+}
+#home .login-wrapper .container .login-box .phone .tel-box a {
+  color: #71797F;
+}
+#home .login-wrapper .container .login-box .phone .tel-box a .mini-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  margin-right: 3px;
+  background-image: url(https://img02.hua.com/pc/assets/img/pc_icon.png);
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-position: 0 0;
+}
+#home .login-wrapper .container .login-box .phone .input-box {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  border: 1px solid #E9ECF0;
+  border-radius: 2px;
+  font-size: 0;
+}
+#home .login-wrapper .container .login-box .phone .input-box .icon-message {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background-image: url(https://img02.hua.com/pc/assets/img/pc_icon.png);
+  background-repeat: no-repeat;
+  background-position: -88px -24px;
+}
+#home .login-wrapper .container .login-box .phone .input-box .pwd {
+  width: 262px;
+  height: 34px;
+  padding: 7px 6px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  border-style: none;
+  color: #71797F;
+}
+#home .login-wrapper .container .login-box .phone .input-box .icon-unlocked {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background-image: url(https://img02.hua.com/pc/assets/img/pc_icon.png);
+  background-repeat: no-repeat;
+  background-position: -44px -24px;
+}
+#home .login-wrapper .container .login-box .phone .tips {
+  display: block;
+  padding-left: 40px;
+  height: 18px;
+  margin: 4px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FF734C;
+}
+#home .login-wrapper .container .login-box .phone .form-tip {
+  margin-top: 12px;
+  color: #B4BABF;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+#home .login-wrapper .container .login-box .phone .form-tip a {
+  color: #71797F;
+}
+#home .login-wrapper .container .login-box .phone .form-btn {
+  width: 100%;
+  height: 36px;
+  margin-top: 10px;
+  border-radius: 24px;
+  font-size: 16px;
+}
+#home .login-wrapper .container .login-box .phone .login-btn {
+  background: #FF734C;
+  color: #fff;
+  border-style: none;
+  cursor: pointer;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  background: #F7F9FA;
+  line-height: 52px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .other-login-ways {
+  margin-top: 0px;
+  padding: 0 8px;
+  font-size: 0;
+  vertical-align: top;
+  max-height: 100%;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .other-login-ways .login-qq {
+  display: inline-block;
+  margin: 0 16px;
+  text-align: center;
+  line-height: 52px;
+  height: 52px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .other-login-ways .login-qq a {
+  display: inline-block;
+  height: 52px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .other-login-ways .login-qq a .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  margin-right: 4px;
+  background-image: url(https://img02.hua.com/pc/assets/img/pc_icon.png);
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-position: -30px -94px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .other-login-ways .login-qq span {
+  font-size: 12px;
+  color: #71797F;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .login-ali {
+  display: inline-block;
+  margin: 0 16px;
+  text-align: center;
+  line-height: 52px;
+  height: 52px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .login-ali a {
+  display: inline-block;
+  height: 52px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .login-ali a .icon-zhifubao {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  margin-right: 4px;
+  background-image: url(https://img02.hua.com/pc/assets/img/pc_icon.png);
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-position: -60px -94px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .login-ali span {
+  font-size: 12px;
+  color: #71797F;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .extra-r {
+  float: right;
+  padding-right: 16px;
+  font-size: 14px;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .extra-r a {
+  text-decoration: none;
+  color: #FF734C;
+}
+#home .login-wrapper .container .login-box .phone .bottom-box .extra-r a .enter {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  margin-right: 4px;
+  background-image: url(https://img02.hua.com/pc/assets/img/pc_icon.png);
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-position: 0 -66px;
+}
+#home .footer-nav {
+  font-size: 12px;
+  width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+  color: #d9d9d9;
+}
+#home .footer-nav a {
+  color: #737373;
+  display: inline-block;
+  margin: 0 32px;
+}
+#home .footer-nav b,
+#home .footer-nav strong {
+  font-weight: bold;
+}
+#home .footer-nav a:first-child {
+  margin-left: 0;
+}
+#home footer {
+  font-size: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  color: #737373;
+}
+#home footer .auth {
+  margin: 20px 0 30px;
+}
+#home footer .auth img {
+  margin: 0 5px;
+}
+#home footer p {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#home footer p a {
+  color: #737373;
+}
+#home footer b {
+  font-weight: normal;
+  color: #d9d9d9;
+}

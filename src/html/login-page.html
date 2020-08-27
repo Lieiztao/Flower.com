@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../styles/css/login-page.css">
+    <link rel="stylesheet" href="../styles/css/common.css">
+</head>
+
+<body>
+    <div id="home">
+        <!-- 顶部导航 -->
+        <div class="site-nav">
+            <div class="container">
+                <ul class="site-nav-l">
+                    <li class="menu-one">
+                        <a href="javascript:;">
+                            <span></span> 收藏鲜花网(hua.com)
+                        </a>
+                    </li>
+                    <li class="memu-two">
+                        <a href="javascript:;">
+                            <span></span> 关注微信
+                        </a>
+                    </li>
+                    <li class="memu-three">
+                        <a href="javascript:;">
+                            <span></span> 花礼网app
+                        </a>
+                    </li>
+                </ul>
+                <ul class="site-nav-r">
+                    <li><a href="javascript:;">
+                        你好，请登录
+                    </a>
+                        <a href="javascript:;">&emsp;请登录</a></li>
+                    <li>
+                        <a href="javascript:;">订单查询</a>
+                    </li>
+                    <li><a href="javascript:;">
+                        我的花礼
+                    </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">客户服务</a>
+
+                    </li>
+                    <li><a href="javascript:;">购物车</a></li>
+                    <li>
+                        中国鲜花礼品网:中国鲜花网领先品牌
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 顶部导航   End -->
+        <!-- 头部 -->
+        <header>
+            <div class="search-header">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="javascript:;" class="logo-nav"></a>
+                </div>
+                <!-- logo over -->
+                <!-- search -->
+                <div class="search">
+                    <form name='i_search' method="GET" action="/search/">
+                        <div class="input-group">
+                            <input name='keyword' type="text" class="form-control" placeholder="商品关键名">
+                            <span class="input-group-btn">
+                                <button id="test" class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <!-- search over -->
+                <!-- phone -->
+                <span class="ico ico-phone"><b>400-889-8188 &emsp;&emsp;|&emsp;&emsp;在线客服</b></span>
+                <!-- phone over -->
+            </div>
+        </header>
+        <!-- 头部  End -->
+        <!-- 登录框 -->
+        <section class="login-wrapper">
+            <div class="container">
+                <div class="login-box">
+                    <ul class="login-tabs">
+                        <li class="by-phone active">账号登录</li>
+                        <li class="by-email">微信登录</li>
+                    </ul>
+                    <!-- form表单 -->
+                    <div class="form1">
+                        <!-- 账号登录 -->
+                        <div class="phone" style="display: block;">
+                            <div class="tel-box">
+                                <a class="toggle-opt" href="javascript:;" style="display:block;"><i class="mini-icon"></i>手机验证码登录</a>
+                            </div>
+
+
+                            <div class="code-box">
+                                <div class="input-box">
+                                    <span class="icon-message"></span>
+                                    <input id="phoneCode" name="phoneCode" class="pwd" type="text" autocomplete="off" placeholder="请输入手机验证码或邮箱">
+                                    <span id="getcode" class="get-code">获取验证码</span>
+                                </div>
+                                <p class="tips"></p>
+                            </div>
+
+
+                            <div class="pwd-box">
+                                <div class="input-box">
+                                    <span class="icon icon-unlocked"></span>
+                                    <input id="phonePassWord" name="phonePassWord" class="pwd pwd-input" type="text" placeholder="请输入密码" onfocus="this.type='password'" autocomplete="off">
+                                </div>
+                                <p class="tips"></p>
+                            </div>
+
+
+                            <input class="form-btn login-btn" type="button" value="注册" onclick="phoneRegister();">
+                            <div class="form-tip">
+                                <a class="pwd-forget" href="javascript:;">忘记密码？</a>
+                            </div>
+                            <!-- 链接列表 -->
+                            <div class="bottom-box">
+                                <ul class="other-login-ways">
+                                    <li class="login-way login-qq"><a href="javascript:;"><i class="icon icon-QQ"></i>
+                                        <span>QQ</span></a></li>
+                                    <li class="login-way login-ali"><a href="javascript:;"><i class="icon icon-zhifubao"></i><span>支付宝</span></a></li>
+                                    <li class="extra-r"><a href="./login-flower.html">注册账号<i class="enter"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- 链接列表 OVER -->
+                        </div>
+                        <!-- 手机注册 End -->
+                    </div>
+                    <!-- form 表单 over -->
+                </div>
+            </div>
+        </section>
+        <!-- 登录框 End -->
+        <!-- 尾部导航 -->
+        <div class="footer-nav">
+            <a href="javascript:;">首页</a>
+            <b>|</b>
+            <a href="javascript:;">关于我们</a>
+            <b>|</b>
+            <a href="javascript:;">媒体报道</a>
+            <b>|</b>
+            <a href="javascript:;">联系方式</a>
+            <b>|</b>
+            <a href="javascript:;">企业团购</a>
+            <b>|</b>
+            <a href="javascript:;">花店入驻</a>
+            <b>|</b>
+            <a href="javascript:;">友情链接</a>
+            <b>|</b> <a href="javascript:;">在线补款</a>
+            <b>|</b>
+            <a class="last-child" href="javascript:;">为什么选择中国鲜花礼品网</a>
+        </div>
+        <!-- 尾部导航 End -->
+        <!-- 通用尾部 -->
+        <footer>
+            <div class="auth">
+                <img src="http://img02.hua.com/pc/assets/img/slogan.png" height="50" width="212">
+                <img src="http://img02.hua.com/pc/assets/img/100.jpg" height="49" width="150">
+                <img src="http://img02.hua.com/pc/assets/img/bico1.jpg" alt="ICP" height="46" width="35">
+                <img src="https://szcert.ebs.org.cn/Images/govIcon.gif" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" width="35" height="49" border="0" style="border-width:0px;border:hidden; border:none;">
+            </div>
+            <p>
+                <a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a>
+                <a href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：
+                <a>粤B2-20050744</a>
+                <b>|</b>
+                <a href="http://beian.miit.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a>
+                <span class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2020</p>
+            <p> <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> </p>
+        </footer>
+        <!-- 通用尾部 -->
+    </div>
+</body>
+
+</html>
