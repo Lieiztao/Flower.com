@@ -7,114 +7,122 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/login-index.css">
     <link rel="stylesheet" href="../styles/css/common.css">
+    <script src="../js/index.js" type="module" async></script>
 </head>
 
 <body>
     <!-- 大盒子 -->
     <div id="home">
-        <!-- 顶部图片链接 -->
-        <a href="javascript:;" class="topbanner">
-            <div class="img"></div>
-        </a>
-        <!-- 顶部图片链接 over -->
 
-
-
-        <!-- 顶部导航栏 -->
-        <div id="top-nav">
-            <div class="top-nav-wrapper">
-                <ul class="top-nav-l">
-                    <li class="menu">
+        <!-- 头部导航 -->
+        <div class="top-nav">
+            <div class="nav-box">
+                <!-- 左侧链接  -->
+                <ul class="nav-left">
+                    <li>
                         <a href="javascript:;">
-                            <span class="icon icon-star"></span> 收藏鲜花网(hua.com)
+                            <span class="icon first"></span> 收藏鲜花网(hua.com)
                         </a>
                     </li>
-                    <li class="menu menu-dropdown">
+                    <li>
                         <a href="javascript:;">
-                            <span class="icon icon-weixin"></span> 关注微信
+                            <span class="icon next"></span> 关注微信
                         </a>
+                        <div class="img">
+                            <img src="http://img02.hua.com/pc/pimg/home/wxguanjia_qrcode.png" width="124">
+                        </div>
                     </li>
-                    <li class="menu menu-dropdown">
+                    <li>
                         <a href="javascript:;">
-                            <span class="icon icon-mobile"></span> 华礼App
+                            <span class="icon last"></span>花礼网app
                         </a>
+                        <div class="img">
+                            <img src="http://img02.hua.com/pc/pimg/home/app_download_qrcode.png" width="120">
+                        </div>
                     </li>
                 </ul>
-                <!-- 右侧菜单 -->
-                <ul class="top-nav-r">
-                    <li class="menu login">
-                        <a href="./login-page.html">你好，请登录</a>
-                        <a href="./login-flower.html">注册</a>
+                <!-- 左侧链接 over -->
+                <!-- 右侧链接  -->
+                <ul class="nav-right">
+                    <li>
+                        <a href="javascript:;">你好，请登录</a>
                     </li>
-                    <li class="menu">
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
                         <a href="javascript:;">订单查询</a>
                     </li>
-                    <li class="menu menu-dropdown">
-                        <a href="javascript:;">客户服务
-                            <span class="icon-arrow"></span>
-                        </a>
+                    <li>
+                        <a href="javascript:;">客户服务</a>
+                        <span class="icon-box"></span>
+                        <div class="img">
+                            <p>在线付款</p>
+                            <p>帮助中心</p>
+                            <p>售后服务</p>
+                            <p>配送范围</p>
+                            <p>留言反馈</p>
+                        </div>
                     </li>
-                    <li class="menu">
-                        <a href="javascript:;">
-                            购物车
-                            <span class="text-primary">(0)</span>
-                        </a>
+                    <li>
+                        <a href="javascript:;">购物车</a>
+                        <span style="color:#FF734C ;">(0)</span>
                     </li>
-                    <li class="menu slogan">
-                        中国鲜花礼品网:中国鲜花网领先品牌
+                    <li>
+                        <span>中国鲜花礼品网:中国鲜花网领先品牌</span>
                     </li>
                 </ul>
+                <!-- 右侧链接 over -->
             </div>
         </div>
-        <!-- 顶部导航栏over -->
+        <!-- 头部导航 over -->
 
 
-        <!-- header -->
+        <!-- 搜索栏 -->
         <div id="header">
-            <div class="header-container">
+            <div class="header-contener">
                 <!-- logo -->
                 <div class="logo">
-                    <a href="/" class="logo-nav"></a>
+                    <a href="./login-index.html"></a>
                 </div>
-                <!-- logo -->
-                <!-- 搜索框 -->
+                <!-- logo over -->
+                <!-- form 搜索 -->
                 <div class="search-box">
-                    <form name="i_search" method="get" action="/search/">
-                        <div class="group">
+                    <form action="javascript:;" name="i-search" method="get">
+                        <div>
                             <div class="search-box-icon">
-                                <span class="icon-search"></span>
+                                <span class="icon"></span>
                             </div>
-                            <input name="keyword" type="text" class="input" placeholder="商品搜索">
-                            <span class="search-box-btn">
-                                <button class="btn btn-primary" type="button">搜索</button>
-                            </span>
+                            <input type="text" placeholder="商品搜索">
+                            <span class="btn-box">
+                            <button class="btn">搜索</button>
+                        </span>
                         </div>
                     </form>
-                    <div class="hotwords">
+                    <div class="search-box-hotwords">
                         <a href="javascript:;">红玫瑰</a>
                         <a href="javascript:;">永生花</a>
                         <a href="javascript:;">生日鲜花</a>
                         <a href="javascript:;">礼品卡</a>
+
                     </div>
                 </div>
-                <!-- 搜索框 end -->
-                <!-- help -->
-                <div class="service serviceDefault">
-                    <div class="service-item">
+                <!--  form over -->
+                <!-- 客服 -->
+                <div class="help">
+                    <div class="help-item">
                         <span class="icon icon-phone"></span>
-                        <div class="service-item-info">400-889-8188</div>
+                        <p>400-889-8188</p>
                     </div>
-                    <div class="service-item">
-                        <a id="header-chat" href="javascript:void(0);">
-                            <span class="icon icon-headset"></span>
-                            <div class="service-item-info">在线客服</div>
-                        </a>
+                    <div class="help-item">
+                        <span class="icon icon-ready"></span>
+                        <p>在线客服</p>
                     </div>
                 </div>
-                <!-- help   over-->
+                <!-- 客服 over -->
             </div>
         </div>
-        <!-- header over -->
+        <!-- 搜索栏  over-->
 
 
 
@@ -166,21 +174,21 @@
                                 <div class="right-pop-list">
                                     <p class="right-pop-title">永生花类别</p>
                                     <div class="right-pop-items">
-                                        <a href="/yongshenghua/yongshenghua_vase.html">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_sort_Vase.png ">
+                                        <a href="javascript:;">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_sort_Vase.png ">
                                             <p>永生瓶花</p>
                                         </a>
-                                        <a href="/yongshenghua/yongshenghua_box.html ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_sort_Box.png">
+                                        <a href="javascript:;">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_sort_Box.png">
                                             <p>经典花盒</p>
                                         </a>
 
-                                        <a href="/yongshenghua/yongshenghua_characteristic.html">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_sort_Special.png ">
+                                        <a href="javascript:;">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_sort_Special.png ">
                                             <p>特色永生花</p>
                                         </a>
-                                        <a href="/yongshenghua/yongshenghua_large.html ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_sort_GiantRose.png">
+                                        <a href="javascript:;">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_sort_GiantRose.png">
                                             <p>巨型玫瑰</p>
                                         </a>
                                     </div>
@@ -189,19 +197,19 @@
                                     <p class="right-pop-title">对象</p>
                                     <div class="right-pop-items">
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_use_Girlfriend.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_use_Girlfriend.png">
                                             <p>送女友</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_use_Boyfriend.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_use_Boyfriend.png">
                                             <p>送男友</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_use_Elder.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_use_Elder.png">
                                             <p>送长辈</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_ppf_use_Friend.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_ppf_use_Friend.png">
                                             <p>送朋友</p>
                                         </a>
                                     </div>
@@ -224,59 +232,59 @@
                                     <p class="right-pop-title">蛋糕品牌</p>
                                     <div class="right-pop-items square">
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_ganso.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_ganso.png">
                                             <p>元祖蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_xfxb.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_xfxb.png">
                                             <p>幸福西饼蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_21cake.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_21cake.png">
                                             <p>廿一客蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_boncake.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_boncake.png">
                                             <p>BONCAKE蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_waffleboy.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_waffleboy.png">
                                             <p>窝夫小子蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_cakeboss.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_cakeboss.png">
                                             <p>CAKEBOSS蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_mcake.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_mcake.png">
                                             <p>Mcake蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_cheesecake.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_cheesecake.png">
                                             <p>心之和蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_pantry.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_pantry.png">
                                             <p>派悦坊蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_micamika.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_micamika.png">
                                             <p>米卡米卡蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_lecake.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_lecake.png">
                                             <p>诺心蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_vcaketop.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_vcaketop.png">
                                             <p>Vcake蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/bestcake.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/bestcake.png">
                                             <p>贝思客蛋糕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_cake_all.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_cake_all.png">
                                             <p>全国蛋糕</p>
                                         </a>
                                     </div>
@@ -297,7 +305,7 @@
                             <h4>
                                 <a href="javascript:;">礼品</a> /
                                 <a href="javascript:; ">公仔</a> /
-                                <a href="javascript:;"></a>绿植</a>
+                                <a href="javascript:;">绿植</a>
                                 <span class="icon icon-arrow-right "></span>
                             </h4>
                             <div class="right-pop ">
@@ -305,23 +313,23 @@
                                     <p class="right-pop-title ">礼品品牌</p>
                                     <div class="right-pop-items square ">
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_brand_SWAROVSKI.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_brand_SWAROVSKI.png">
                                             <p>施华洛世奇</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_brand_GlamEver.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_brand_GlamEver.png ">
                                             <p>Glam Ever潮牌饰品</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_brand_Dior.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_brand_Dior.png">
                                             <p>迪奥Dior</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_brand_MW.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_brand_MW.png ">
                                             <p>猫王收音机</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_brand_HelloKitty.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_brand_HelloKitty.png">
                                             <p>Hello Kitty</p>
                                         </a>
                                     </div>
@@ -330,47 +338,47 @@
                                     <p class="right-pop-title">礼品类别</p>
                                     <div class="right-pop-items">
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_Musicbox.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_Musicbox.png ">
                                             <p>音乐盒</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_Goldfoilflower.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_Goldfoilflower.png">
                                             <p>金箔花</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_3DCrystal.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_3DCrystal.png ">
                                             <p>3D水晶内雕</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_JewelryBeauty.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_JewelryBeauty.png">
                                             <p>首饰/美妆</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_Chocolates.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_Chocolates.png ">
                                             <p>巧克力</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_dolls.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_dolls.png">
                                             <p>公仔/睡枕</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_OrnamentsOthers.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_OrnamentsOthers.png ">
                                             <p>摆件/其他</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_Plants_Green.png">
+                                            <img class="lazy" data-original="//img02.hua.com/m/category/Classification/m_category_Plants_Green.png">
                                             <p>绿色植物</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_Plants_Potted.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_Plants_Potted.png ">
                                             <p>盆栽花卉</p>
                                         </a>
                                         <a href="javascript:; ">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_Plants_Succulent.png">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_Plants_Succulent.png">
                                             <p>多肉植物盆栽</p>
                                         </a>
                                         <a href="javascript:;">
-                                            <img src="//img02.hua.com/m/category/Classification/m_category_gift_sort_Yinxiang.png ">
+                                            <img class="lazy" data-original="http://img02.hua.com/m/category/Classification/m_category_gift_sort_Yinxiang.png ">
                                             <p>蓝牙音箱</p>
                                         </a>
                                     </div>
@@ -416,23 +424,27 @@
 
         <!-- 轮播图 -->
         <div class="sliders">
-            <div class="sliders-run">
-                <div class="sliders-imgs">
-                    <img src="http://img02.hua.com/slider/20_xingzuo_chunv_pc.jpg" alt="">
-                    <img src="http://img02.hua.com/slider/20_birthday_pc.jpg" alt="">
-                    <img src="http://img02.hua.com/slider/20_teacherday_banner_pc.jpg" alt="">
-                    <img src="http://img02.hua.com/slider/20_youflower_pc.jpg" alt="">
-                    <img src="http://img02.hua.com/slider/20_longtou.jpg" alt="">
-                </div>
-                <ol class="sliders-index">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
+            <div class="img-box">
+                <img src="http://img02.hua.com/slider/20_xingzuo_chunv_pc.jpg" alt="" class="active">
+                <img src="http://img02.hua.com/slider/20_birthday_pc.jpg" alt="">
+                <img src="http://img02.hua.com/slider/20_teacherday_banner_pc.jpg" alt="">
+                <img src="http://img02.hua.com/slider/20_youflower_pc.jpg" alt="">
+                <img src="http://img02.hua.com/slider/20_longtou.jpg" alt="">
+            </div>
+            <div class="btn-left btn">
+                <span>&lt;</span>
             </div>
 
+            <div class="btn-right btn">
+                <span>&gt;</span>
+            </div>
+            <ol>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
         </div>
         <!-- 轮播图 over -->
 
@@ -481,26 +493,26 @@
             <div class="scene-list">
                 <div class="scene-item-vertical">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_lover.jpg" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_lover.jpg" alt="">
                     </a>
                 </div>
             </div>
             <div class="scene-list">
                 <div class="scene-item-horizontal">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_elder.jpg" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_elder.jpg" alt="">
                     </a>
                 </div>
                 <div class="scene-item-horizontal">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_friend.jpg" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_friend.jpg" alt="">
                     </a>
                 </div>
             </div>
             <div class="scene-list">
                 <div class="scene-item-vertical">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_birthday.jpg" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_birthday.jpg" alt="">
                     </a>
                 </div>
             </div>
@@ -508,18 +520,18 @@
                 <div class="scene-item-horizontal">
                     <div class="scene-item-vertical-mini">
                         <a href="javascript:;">
-                            <img src="http://img02.hua.com/pc/pimg/home/home_channel_express.jpg" alt="">
+                            <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_express.jpg" alt="">
                         </a>
                     </div>
                     <div class="scene-item-vertical-mini">
                         <a href="javascript:;">
-                            <img src="http://img02.hua.com/pc/pimg/home/home_channel_business.png" alt="">
+                            <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_business.png" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="scene-item-horizontal">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_you_2.jpg?v2" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_you_2.jpg?v2" alt="">
                     </a>
                 </div>
             </div>
@@ -532,7 +544,7 @@
             <div class="scene-list">
                 <div class="scene-item-vertical">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_rexiao.png" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_rexiao.png" alt="">
                     </a>
                     <span>热销21.6万束</span>
                 </div>
@@ -540,21 +552,21 @@
             <div class="scene-list">
                 <div class="scene-item-vertical">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_tejia.png" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_tejia.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="scene-list">
                 <div class="scene-item-vertical">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_xinpin.png" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_xinpin.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="scene-list">
                 <div class="scene-item-vertical">
                     <a href="javascript:;">
-                        <img src="http://img02.hua.com/pc/pimg/home/home_channel_pinwei.png" alt="">
+                        <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_channel_pinwei.png" alt="">
                     </a>
                 </div>
             </div>
@@ -570,24 +582,24 @@
             <div class="fl f-lover">
                 <div class="fl-container">
                     <div class="hd">
-                        <a class="more" href="/aiqingxianhua/" target="_blank">更多爱情鲜花<span class="icon icon-arrow-right"></span></a>
-                        <h3><a href="/aiqingxianhua/" target="_blank">爱情鲜花</a><span>送 · 让你怦然心动的人</span></h3>
+                        <a class="more" href="javascript:;">更多爱情鲜花<span class="icon icon-arrow-right"></span></a>
+                        <h3><a href="javascript:;">爱情鲜花</a><span>送 · 让你怦然心动的人</span></h3>
                     </div>
                     <div class="bd">
                         <div class="bd-l">
                             <div class="banner-box">
-                                <a href="/aiqingxianhua/" target="_blank"><img data-original="//img02.hua.com/pc/pimg/home/home_floor_lover.png" width="288" height="656" src="//img02.hua.com/pc/pimg/home/home_floor_lover.png" style="display: inline;"></a>
+                                <a href="javascript:;"><img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_floor_lover.png" width="288" height="656" data-original="//img02.hua.com/pc/pimg/home/home_floor_lover.png" style="display: inline;"></a>
                                 <div class="link-cover">
-                                    <a href="/aiqingxianhua/" target="_blank">爱情鲜花专区<span class="icon icon-dotarrow"></span></a>
+                                    <a href="javascript:;">爱情鲜花专区<span class="icon icon-dotarrow"></span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="fl-products">
 
                             <div class="fl-products-item">
-                                <a href="/product/9010966.html?huaPid=homepage-f101" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 一往情深</p>
@@ -600,9 +612,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012467.html?huaPid=homepage-f102" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012467.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012467.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012467.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012467.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · Best for You</p>
@@ -615,9 +627,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012450.html?huaPid=homepage-f103" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012450.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012450.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012450.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012450.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 韩式系列/初心不负</p>
@@ -630,9 +642,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012455.html?huaPid=homepage-f104" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012455.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012455.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012455.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012455.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 韩式系列/亲爱的你</p>
@@ -645,9 +657,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012243.html?huaPid=homepage-f105" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012243.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012243.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012243.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012243.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 恋恋情深</p>
@@ -660,9 +672,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012009.html?huaPid=homepage-f106" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012009.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012009.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012009.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012009.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 忘情巴黎</p>
@@ -675,9 +687,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012177.html?huaPid=homepage-f107" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 不变的承诺</p>
@@ -690,9 +702,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012089.html?huaPid=homepage-f108" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">爱情 · 爱在心头</p>
@@ -717,24 +729,24 @@
             <div class="fl f-elder">
                 <div class="fl-container">
                     <div class="hd">
-                        <a class="more" href="/songzhangbeixianhua/" target="_blank">更多送长辈鲜花<span class="icon icon-arrow-right"></span></a>
-                        <h3><a href="/songzhangbeixianhua/" target="_blank">送长辈鲜花</a><span>赠 · 父母/恩师/长辈</span></h3>
+                        <a class="more" href="javascript:;">更多送长辈鲜花<span class="icon icon-arrow-right"></span></a>
+                        <h3><a href="javascript:;">送长辈鲜花</a><span>赠 · 父母/恩师/长辈</span></h3>
                     </div>
                     <div class="bd">
                         <div class="bd-l">
                             <div class="banner-box">
-                                <a href="/songzhangbeixianhua/" target="_blank"><img data-original="//img02.hua.com/pc/pimg/home/home_floor_elder.png" width="288" height="656" src="//img02.hua.com/pc/pimg/home/home_floor_elder.png" style="display: inline;"></a>
+                                <a href="javascript:;"><img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_floor_elder.png" width="288" height="656" data-original="//img02.hua.com/pc/pimg/home/home_floor_elder.png" style="display: inline;"></a>
                                 <div class="link-cover">
-                                    <a href="/songzhangbeixianhua/" target="_blank">送长辈鲜花专区<span class="icon icon-dotarrow"></span></a>
+                                    <a href="javascript:;">送长辈鲜花专区<span class="icon icon-dotarrow"></span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="fl-products">
 
                             <div class="fl-products-item">
-                                <a href="/product/9012452.html?huaPid=homepage-f201" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012452.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012452.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012452.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012452.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 韩式系列/一路向阳</p>
@@ -747,9 +759,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012092.html?huaPid=homepage-f202" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012092.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012092.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012092.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012092.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 母爱</p>
@@ -762,9 +774,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012204.html?huaPid=homepage-f203" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012204.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012204.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012204.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012204.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 幸福万年长</p>
@@ -777,9 +789,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012462.html?huaPid=homepage-f204" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012462.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012462.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012462.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012462.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 韩式花篮/平淡岁月</p>
@@ -792,9 +804,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012201.html?huaPid=homepage-f205" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012201.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012201.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012201.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012201.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 馨情无限</p>
@@ -807,9 +819,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012461.html?huaPid=homepage-f206" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012461.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012461.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012461.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012461.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 韩式系列/温柔以待</p>
@@ -822,9 +834,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9010741.html?huaPid=homepage-f207" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9010741.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9010741.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9010741.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9010741.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 健康长久</p>
@@ -837,9 +849,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/9012095.html?huaPid=homepage-f208" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/9012095.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/9012095.jpg_220x240.jpg" style="display: inline;">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/9012095.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/9012095.jpg_220x240.jpg" style="display: inline;">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">送长辈 · 幸福绽放</p>
@@ -861,24 +873,24 @@
             <div class="fl f-song">
                 <div class="fl-container">
                     <div class="hd">
-                        <a class="more" href="/yongshenghua/" target="_blank">更多永生花<span class="icon icon-arrow-right"></span></a>
-                        <h3><a href="/yongshenghua/" target="_blank">永生花</a><span>许 · 她一生承诺</span></h3>
+                        <a class="more" href="javascript:;">更多永生花<span class="icon icon-arrow-right"></span></a>
+                        <h3><a href="javascript:;">永生花</a><span>许 · 她一生承诺</span></h3>
                     </div>
                     <div class="bd">
                         <div class="bd-l">
                             <div class="banner-box">
-                                <a href="/yongshenghua/" target="_blank"><img data-original="http://img02.hua.com/pc/pimg/home/home_floor_song.jpg" width="288" height="656" src="http://img02.hua.com/pc/pimg/home/home_floor_song.jpg"></a>
+                                <a href="javascript:;"><img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/home_floor_song.jpg" width="288" height="656" data-original="http://img02.hua.com/pc/pimg/home/home_floor_song.jpg"></a>
                                 <div class="link-cover">
-                                    <a href="/yongshenghua/" target="_blank">永生花专区<span class="icon icon-dotarrow"></span></a>
+                                    <a href="javascript:;">永生花专区<span class="icon icon-dotarrow"></span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="fl-products">
 
                             <div class="fl-products-item">
-                                <a href="/product/1073155.html?huaPid=homepage-f301" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073155.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073155.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073155.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073155.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · Be My Love</p>
@@ -891,9 +903,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073287.html?huaPid=homepage-f302" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073287.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073287.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073287.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073287.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · 心形永生花巧克力礼盒/七夕定制/心语98g</p>
@@ -906,9 +918,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073275.html?huaPid=homepage-f303" target="_blank">
+                                <a href="javascript:;">
                                     <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073275.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073275.jpg_220x240.jpg">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073275.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073275.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · 520999迪奥双口红款永生花礼盒/粉</p>
@@ -921,9 +933,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073263.html?huaPid=homepage-f304" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · 永生花满月艺术台灯/朦胧粉</p>
@@ -936,9 +948,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073186.html?huaPid=homepage-f305" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · 我如此爱你-口红款520</p>
@@ -951,9 +963,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073033.html?huaPid=homepage-f306" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073033.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073033.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073033.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073033.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · 一生一世</p>
@@ -966,9 +978,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073247.html?huaPid=homepage-f307" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · 花好月圆永生花台灯</p>
@@ -981,9 +993,9 @@
                                 </a>
                             </div>
                             <div class="fl-products-item">
-                                <a href="/product/1073094.html?huaPid=homepage-f308" target="_blank">
-                                    <div class="img-box" href="/product/9010966.html">
-                                        <img data-original="https://img01.hua.com/uploadpic/newpic/1073094.jpg_220x240.jpg" height="240" width="220" src="https://img01.hua.com/uploadpic/newpic/1073094.jpg_220x240.jpg">
+                                <a href="javascript:;">
+                                    <div class="img-box" href="javascript:;">
+                                        <img class="lazy" data-original="https://img01.hua.com/uploadpic/newpic/1073094.jpg_220x240.jpg" height="240" width="220" data-original="https://img01.hua.com/uploadpic/newpic/1073094.jpg_220x240.jpg">
                                     </div>
                                     <div class="product-content">
                                         <p class="product-title">永生花 · To温暖你心</p>
@@ -1007,102 +1019,102 @@
                 <div class="f-server-bd">
                     <div class="articles">
                         <div class="articles-hd">
-                            <a href="/huayu/" target="_blank">更多 &gt;</a>
+                            <a href="javascript:;">更多 &gt;</a>
                             <h4>热门资讯</h4>
                         </div>
                         <div class="articles-bd">
                             <ul class="articles-list">
-                                <li class="articles-item"><a href="/theme/teacherday/" target="_blank">教师节节鲜花礼物</a></li>
-                                <li class="articles-item"><a href="/theme/chunvzuo/" target="_blank">处女座鲜花礼物</a></li>
-                                <li class="articles-item"><a href="/huayu/20051115103610.htm" target="_blank">鲜花枝数与其对应的含意</a></li>
-                                <li class="articles-item"><a href="/huayu/20051115103923.htm" target="_blank">鲜花寓意 浪漫花语</a></li>
-                                <li class="articles-item"><a href="/huayu/20051116174222.htm" target="_blank">通用送花祝福语-经典送花祝福语</a></li>
-                                <li class="articles-item"><a href="/huayu/20051115105306.htm" target="_blank">送花的常识与技巧</a></li>
-                                <li class="articles-item"><a href="/huayu/20050405004253.htm" target="_blank">女孩都喜欢别人送鲜花吗？</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23088.html" target="_blank" title="表白应该送几朵玫瑰？告白玫瑰送几朵？">表白应该送几朵玫瑰？告白玫瑰送几</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23066.html" target="_blank" title="最近要买礼物的男生速点！一大波新品已就位~">最近要买礼物的男生速点！一大波新</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/22994.html" target="_blank" title="给爷爷送花有哪些选择？给老人送花推荐！">给爷爷送花有哪些选择？给老人送花</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/22993.html" target="_blank" title="送花要注意什么？如何给老人，爱人，朋友送花？">送花要注意什么？如何给老人，爱人</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/14821.html" target="_blank" title="12星座异地恋如何维持？送你一份送花攻略！">12星座异地恋如何维持？送你一份</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/10786.html" target="_blank" title="送花的含义，生活中怎么送花？">送花的含义，生活中怎么送花？</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/11031.html" target="_blank" title="送女朋友鲜花，送花卡片写什么？">送女朋友鲜花，送花卡片写什么？</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/13297.html" target="_blank" title="异地恋有大招，教你不分手！">异地恋有大招，教你不分手！</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23393.html" target="_blank" title="同学被心仪的大学录取，送这些礼物给他们更显心意！">同学被心仪的大学录取，送这些礼物</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23392.html" target="_blank" title="朋友获奖，送这些花祝贺他更上一层楼！">朋友获奖，送这些花祝贺他更上一层</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23391.html" target="_blank" title="好朋友获奖，作为闺蜜送她什么花庆祝成功的喜悦呢？">好朋友获奖，作为闺蜜送她什么花庆</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23389.html" target="_blank" title="九月份这些花会开放，现在起要多加养护！">九月份这些花会开放，现在起要多加</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23388.html" target="_blank" title="忘记老婆生日，赶快弥补送礼讨老婆欢心！">忘记老婆生日，赶快弥补送礼讨老婆</a></li>
-                                <li class="articles-item"><a href="//www.hua.com/huayu/23387.html" target="_blank" title="七夕送花给没确定关系的女生有什么要注意的吗？">七夕送花给没确定关系的女生有什么</a></li>
+                                <li class="articles-item"><a href="javascript:;">教师节节鲜花礼物</a></li>
+                                <li class="articles-item"><a href="javascript:;">处女座鲜花礼物</a></li>
+                                <li class="articles-item"><a href="javascript:;">鲜花枝数与其对应的含意</a></li>
+                                <li class="articles-item"><a href="javascript:;">鲜花寓意 浪漫花语</a></li>
+                                <li class="articles-item"><a href="javascript:;">通用送花祝福语-经典送花祝福语</a></li>
+                                <li class="articles-item"><a href="javascript:;">送花的常识与技巧</a></li>
+                                <li class="articles-item"><a href="javascript:;">女孩都喜欢别人送鲜花吗？</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="表白应该送几朵玫瑰？告白玫瑰送几朵？">表白应该送几朵玫瑰？告白玫瑰送几</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="最近要买礼物的男生速点！一大波新品已就位~">最近要买礼物的男生速点！一大波新</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="给爷爷送花有哪些选择？给老人送花推荐！">给爷爷送花有哪些选择？给老人送花</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="送花要注意什么？如何给老人，爱人，朋友送花？">送花要注意什么？如何给老人，爱人</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="12星座异地恋如何维持？送你一份送花攻略！">12星座异地恋如何维持？送你一份</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="送花的含义，生活中怎么送花？">送花的含义，生活中怎么送花？</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="送女朋友鲜花，送花卡片写什么？">送女朋友鲜花，送花卡片写什么？</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="异地恋有大招，教你不分手！">异地恋有大招，教你不分手！</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="同学被心仪的大学录取，送这些礼物给他们更显心意！">同学被心仪的大学录取，送这些礼物</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="朋友获奖，送这些花祝贺他更上一层楼！">朋友获奖，送这些花祝贺他更上一层</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="好朋友获奖，作为闺蜜送她什么花庆祝成功的喜悦呢？">好朋友获奖，作为闺蜜送她什么花庆</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="九月份这些花会开放，现在起要多加养护！">九月份这些花会开放，现在起要多加</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="忘记老婆生日，赶快弥补送礼讨老婆欢心！">忘记老婆生日，赶快弥补送礼讨老婆</a></li>
+                                <li class="articles-item"><a href="javascript:;" title="七夕送花给没确定关系的女生有什么要注意的吗？">七夕送花给没确定关系的女生有什么</a></li>
                             </ul>
                         </div>
                     </div>
                     <ul class="f-server-list clearfix">
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server1"></span>15年品牌</a>
+                            <a href="javascript:;"><span class="icon icon-server1"></span>15年品牌</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server2"></span>3小时配送</a>
+                            <a href="javascript:;"><span class="icon icon-server2"></span>3小时配送</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server3"></span>订单实拍</a>
+                            <a href="javascript:;"><span class="icon icon-server3"></span>订单实拍</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server4"></span>200%退赔承诺</a>
+                            <a href="javascript:;"><span class="icon icon-server4"></span>200%退赔承诺</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server5"></span>销量领先</a>
+                            <a href="javascript:;"><span class="icon icon-server5"></span>销量领先</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server6"></span>百万客户信赖</a>
+                            <a href="javascript:;"><span class="icon icon-server6"></span>百万客户信赖</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server7"></span>低价保障</a>
+                            <a href="javascript:;"><span class="icon icon-server7"></span>低价保障</a>
                         </li>
                         <li class="f-server-item">
-                            <a href="/profile/why_choose_us.htm" target="_blank"><span class="icon icon-server8"></span>时尚原创花艺</a>
+                            <a href="javascript:;"><span class="icon icon-server8"></span>时尚原创花艺</a>
                         </li>
                     </ul>
                     <div class="help-container">
                         <div class="help-server">
                             <h4>客户服务</h4>
                             <ul class="help-server-list">
-                                <li><a href="/help/default.htm">服务声明</a></li>
-                                <li><a href="/help/faq.htm">常见问题</a></li>
-                                <li><a href="/help/afterservice.htm">售后服务</a></li>
-                                <li><a href="/help/send_shuoming.htm">配送说明</a></li>
-                                <li><a href="/help/sendRange.htm">配送范围</a></li>
-                                <li><a href="/help/ordercx/">订单查询</a></li>
-                                <li><a href="/help/order_cancel.htm">取消订单</a></li>
-                                <li><a href="/help/re_payment.htm">补交货款</a></li>
-                                <li><a href="/help/private.htm">隐私条款</a></li>
-                                <li><a href="/help/safe.htm">安全条款</a></li>
+                                <li><a href="javascript:;">服务声明</a></li>
+                                <li><a href="javascript:;">常见问题</a></li>
+                                <li><a href="javascript:;">售后服务</a></li>
+                                <li><a href="javascript:;">配送说明</a></li>
+                                <li><a href="javascript:;">配送范围</a></li>
+                                <li><a href="javascript:;">订单查询</a></li>
+                                <li><a href="javascript:;">取消订单</a></li>
+                                <li><a href="javascript:;">补交货款</a></li>
+                                <li><a href="javascript:;">隐私条款</a></li>
+                                <li><a href="javascript:;">安全条款</a></li>
                             </ul>
                         </div>
                         <div class="help-infos">
                             <h4>热门资讯</h4>
                             <ul class="help-infos-list clearfix">
-                                <li><a href="/help/shop_step.htm" target="_blank" class="thiscolor_h">中国鲜花礼品网购物流程</a></li>
-                                <li><a href="/help/demo.htm" target="_blank">中国鲜花礼品网订购演示</a> </li>
-                                <li><a href="/help/sendRange.htm" target="_blank">鲜花网能配送哪些城市？</a></li>
-                                <li><a href="/help/afterservice.htm" target="_blank">鲜花售后服务是怎么样的？</a></li>
-                                <li><a href="/help/Orde_in_advance.htm" target="_blank">我应该提前多久预订鲜花？</a></li>
+                                <li><a href="javascript:;" class="thiscolor_h">中国鲜花礼品网购物流程</a></li>
+                                <li><a href="javascript:;">中国鲜花礼品网订购演示</a> </li>
+                                <li><a href="javascript:;">鲜花网能配送哪些城市？</a></li>
+                                <li><a href="javascript:;">鲜花售后服务是怎么样的？</a></li>
+                                <li><a href="javascript:;">我应该提前多久预订鲜花？</a></li>
                             </ul>
                         </div>
                         <div class="help-city">
                             <h4>同城鲜花专区</h4>
                             <ul class="help-city-list clearfix">
-                                <li><a href="https://sz.hua.com/" target="_blank" title="深圳鲜花">深圳鲜花</a></li>
-                                <li><a href="https://gz.hua.com/" target="_blank" title="广州鲜花">广州鲜花</a></li>
-                                <li><a href="https://sh.hua.com/" target="_blank" title="上海鲜花">上海鲜花</a></li>
-                                <li><a href="https://bj.hua.com/" target="_blank" title="北京鲜花">北京鲜花</a></li>
-                                <li><a href="https://tj.hua.com/" target="_blank" title="天津鲜花">天津鲜花</a></li>
-                                <li><a href="https://cq.hua.com/" target="_blank" title="重庆鲜花">重庆鲜花</a></li>
-                                <li><a href="https://cd.hua.com/" target="_blank" title="成都鲜花">成都鲜花</a></li>
-                                <li><a href="https://xa.hua.com/" target="_blank" title="西安鲜花">西安鲜花</a></li>
-                                <li><a href="https://wh.hua.com/" target="_blank" title="武汉鲜花">武汉鲜花</a></li>
-                                <li><a href="https://nj.hua.com/" target="_blank" title="南京鲜花">南京鲜花</a></li>
-                                <li><a href="https://xm.hua.com/" target="_blank" title="厦门鲜花">厦门鲜花</a></li>
-                                <li><a href="/help/sendRange.htm" target="_blank" title="更多城市">更多城市</a></li>
+                                <li><a href="javascript:;" title="深圳鲜花">深圳鲜花</a></li>
+                                <li><a href="javascript:;" title="广州鲜花">广州鲜花</a></li>
+                                <li><a href="javascript:;" title="上海鲜花">上海鲜花</a></li>
+                                <li><a href="javascript:;" title="北京鲜花">北京鲜花</a></li>
+                                <li><a href="javascript:;" title="天津鲜花">天津鲜花</a></li>
+                                <li><a href="javascript:;" title="重庆鲜花">重庆鲜花</a></li>
+                                <li><a href="javascript:;" title="成都鲜花">成都鲜花</a></li>
+                                <li><a href="javascript:;" title="西安鲜花">西安鲜花</a></li>
+                                <li><a href="javascript:;" title="武汉鲜花">武汉鲜花</a></li>
+                                <li><a href="javascript:;" title="南京鲜花">南京鲜花</a></li>
+                                <li><a href="javascript:;" title="厦门鲜花">厦门鲜花</a></li>
+                                <li><a href="javascript:;" title="更多城市">更多城市</a></li>
                             </ul>
                         </div>
                         <div class="help-contact">
@@ -1112,16 +1124,16 @@
                                 <p>E-mail: kefu@hua.com</p>
                                 <p>7x24小时在线订购</p>
                                 <p>客服工作时间：8:30-21:00</p>
-                                <div class="help-contact-kf"><a href="javascript:void(0);" onclick="openChatWindow()"><span class="icon icon-contact"></span>在线客服</a></div>
+                                <div class="help-contact-kf"><a href="javascript:void(0);"><span class="icon icon-contact"></span>在线客服</a></div>
                             </div>
                         </div>
                         <div class="help-qrcode">
                             <div class="help-qrcode-item">
-                                <img src="//img02.hua.com/pc/pimg/home/app_download_qrcode.png" alt="">
+                                <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/app_download_qrcode.png" alt="">
                                 <p>扫码下载手机版</p>
                             </div>
                             <div class="help-qrcode-item">
-                                <img src="//img02.hua.com/pc/pimg/home/wxguanjia_qrcode.png" alt="">
+                                <img class="lazy" data-original="http://img02.hua.com/pc/pimg/home/wxguanjia_qrcode.png" alt="">
                                 <p>关注公众号有惊喜</p>
                             </div>
                         </div>
@@ -1145,29 +1157,29 @@
                 <!-- 尾部导航 -->
                 <div class="fl-nav">
                     <a href="/">首页</a>
-                    <a href="/profile/about.htm" target="_blank">关于我们</a>
-                    <a href="/profile/media.html" target="_blank">媒体报道</a>
-                    <a href="/profile/contact.htm" target="_blank">联系方式</a>
-                    <a href="/qiyetuangou/" target="_blank">企业团购</a>
-                    <a href="/liansuo/" target="_blank">花店入驻</a>
-                    <a href="/profile/links.htm" target="_blank">友情链接</a>
-                    <a href="/member/payment/balancefill" target="_blank">在线补款</a>
-                    <a href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+                    <a href="javascript:;">关于我们</a>
+                    <a href="javascript:;">媒体报道</a>
+                    <a href="javascript:;">联系方式</a>
+                    <a href="javascript:;">企业团购</a>
+                    <a href="javascript:;">花店入驻</a>
+                    <a href="javascript:;">友情链接</a>
+                    <a href="javascript:;">在线补款</a>
+                    <a href="javascript:;">为什么选择中国鲜花礼品网</a>
                 </div>
                 <!-- 尾部导航 over -->
                 <!-- 尾部证书 -->
                 <div class="fl-site">
                     <p>
-                        <a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a>
-                        <a href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a>粤B2-20050744</a>
-                        <a href="http://beian.miit.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> <span class="icon icon-beian"></span>粤公网安备44030502000373号 Copyright © 2005-2020
+                        <a href="javascript:;" rel="nofollow" title="中国花卉协会会员">中国花卉协会会员</a>
+                        <a href="javascript:;" rel="nofollow">中国电子商务协会会员</a> ICP经营许可证：<a>粤B2-20050744</a>
+                        <a href="javascript:;" rel="nofollow">粤ICP备09171662号</a> <span class="icon icon-beian"></span>粤公网安备44030502000373号 Copyright © 2005-2020
                     </p>
                     <p>花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> 中国鲜花网领先品牌，鲜花速递专家！</p>
                     <div class="ft-auth">
                         <span class="icon icon-slogan"></span>
-                        <a href="/profile/about.htm" target="_blank"><span class="icon icon-top100"></span></a>
+                        <a href="javascript:;"><span class="icon icon-top100"></span></a>
                         <div class="ft-auth-border">
-                            <a href="https://szcert.ebs.org.cn/fab6de6a-ff80-4e63-89e4-cd531170c256" target="_blank"><img src="https://szcert.ebs.org.cn/Images/govIcon.gif" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" width="75" height="105" border="0" style="border-width:0px;border:hidden; border:none;"></a>
+                            <a href="javascript:;"><img class="lazy" data-original="https://szcert.ebs.org.cn/Images/govIcon.gif" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示" width="75" height="105" border="0" style="border-width:0px;border:hidden; border:none;"></a>
                         </div>
                     </div>
 
@@ -1176,22 +1188,22 @@
                 <!-- 友情链接 -->
                 <div class="fl-link">
                     <span>友链</span>
-                    <a href="http://www.chinaname.cn/" target="_blank">中华取名网</a>
-                    <a href="http://sz.fang.com/" target="_blank">深圳房产网</a>
-                    <a href="http://www.juanpi.com" target="_blank">卷皮网</a>
-                    <a href="http://www.wbiao.cn" target="_blank">腕表</a>
-                    <a href="http://www.yuanlin365.com/" target="_blank">苗木</a>
-                    <a href="http://www.zocai.com/" target="_blank">佐卡伊珠宝网</a>
-                    <a href="http://www.blove.com/" target="_blank">钻石婚戒定制</a>
-                    <a href="http://www.iyijiao.com/" target="_blank">中国青少年艺术教育网</a>
-                    <a href="http://www.dog126.com/" target="_blank">淘狗网</a>
-                    <a href="http://www.liwuyou.com/" target="_blank">礼无忧网</a>
-                    <a href="http://www.goupuzi.com/" target="_blank">宠物狗</a>
-                    <a href="http://www.jiyouwang.com/" target="_blank">机友网</a>
-                    <a href="http://www.cocodiy.com/" target="_blank">礼物网</a>
-                    <a href="http://www.ipo3.com/" target="_blank">新三板</a>
-                    <a href="http://www.huoming.com/" target="_blank">商标注册</a>
-                    <a href="http://www.loho88.com" target="_blank">眼镜店</a>
+                    <a href="javascript:;">中华取名网</a>
+                    <a href="javascript:;">深圳房产网</a>
+                    <a href="javascript:;">卷皮网</a>
+                    <a href="javascript:;">腕表</a>
+                    <a href="javascript:;">苗木</a>
+                    <a href="javascript:;">佐卡伊珠宝网</a>
+                    <a href="javascript:;">钻石婚戒定制</a>
+                    <a href="javascript:;">中国青少年艺术教育网</a>
+                    <a href="javascript:;">淘狗网</a>
+                    <a href="javascript:;">礼无忧网</a>
+                    <a href="javascript:;">宠物狗</a>
+                    <a href="javascript:;">机友网</a>
+                    <a href="javascript:;">礼物网</a>
+                    <a href="javascript:;">新三板</a>
+                    <a href="javascript:;">商标注册</a>
+                    <a href="javascript:;">眼镜店</a>
                 </div>
                 <!-- 友情链接  over -->
             </div>
@@ -1199,51 +1211,12 @@
         <!-- 尾部 over -->
 
         <!-- 弹窗链接 -->
-        <div id="min-window">
-            <div id="quick_links" class="quick_links">
-                <li>
-                    <a href="#none" class="my_qlinks"><i class="ico_user"></i></a>
-                    <!-- ***** 未登录 ***** -->
-                    <div class="ibar_login_box" style="display: none;">
-                        <div class="avatar_box" id="loginStats">
-                            <p class="avatar_imgbox"><img src="//img02.hua.com/pc/assets/img/mbar/avatar_none.jpg"></p>你好！请 <a href="/Passport/Login/?backUrl=https://www.hua.com/">登录</a> | <a href="/Passport/Register/">注册</a></div>
-                        <div class="login_btnbox">
-                            <a href="/Member/Order/"><i class="ico_order"></i>我的订单</a>
-                        </div>
-                        <i class="icon_arrow_right_white"></i>
-                    </div>
+        <div class="window-up">
+            <ul>
+                <li class="user">
+
                 </li>
-                <li id="shopCart">
-                    <a href="javascript:void(0)" class="message_list"><i class="ico_cart"></i><div class="span">购物车</div><span class="cart_num" id="cart_num">0</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="history_list"><i class="ico_collect"></i></a>
-                    <div class="mp_tooltip" style="left: -150px; visibility: hidden;">
-                        <a href="javascript:void(0)" class="history_list" style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">我的收藏</a>
-                        <i class="icon_arrow_right_white"></i>
-                    </div>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="mpbtn_histroy"><i class="ico_histroy"></i></a>
-                    <div class="mp_tooltip" style="left: -150px; visibility: hidden;">
-                        <a href="javascript:void(0)" class="mpbtn_histroy" style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">最近查看</a>
-                        <i class="icon_arrow_right_white"></i>
-                    </div>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" class="leave_message"><i class="ico_phone"></i></a>
-                    <div class="mp_tooltip" style="left: -150px; visibility: hidden;"><span id="rightbartel">400-889-8188</span><i class="icon_arrow_right_white"></i></div>
-                </li>
-                <li>
-                    <a id="kefu" href="javascript:;" target="_blank" class="mpbtn_recharge"><i class="ico_headset"></i></a>
-                    <div class="mp_tooltip" style="left: -150px; visibility: hidden;">
-                        <a id="kefu1" href="javascript:;" target="_blank" class="mpbtn_recharge1" style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;" title="在线客服">
-                            在线客服
-                        </a>
-                        <i class="icon_arrow_right_white"></i>
-                    </div>
-                </li>
-            </div>
+            </ul>
         </div>
 
         <!-- 弹窗链接 over -->

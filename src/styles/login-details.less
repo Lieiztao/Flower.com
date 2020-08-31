@@ -1,0 +1,1330 @@
+@charset 'utf-8';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// 大盒子
+#home{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #232628;
+    font-family: "Microsoft Yahei", "微软雅黑", verdana;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+       //头部导航
+       .top-nav{
+        background-color: #F3F5F7;
+        width: 100%;
+        height: 40px;
+        .nav-box{
+            width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            li{
+                padding: 0 16px;
+                float: left;
+                line-height: 40px;
+                position: relative;
+                a{
+                    color: #71797F;
+                    font-size: 12px;
+                }
+                span{
+                    color: #71797F;
+                    font-size: 12px;
+                }
+            }
+            //左侧导航
+            .nav-left{
+                list-style: none;
+                float: left;
+                li{
+                    a{
+                        .icon{
+                            width: 14px;
+                            height: 14px;
+                            margin-top: 12px;
+                            margin-right: 4px;
+                            display: inline-block;
+                            background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+                            background-repeat: no-repeat;
+                            vertical-align: top;
+                            background-position: 0 -21px;
+                        }
+                        .next{
+                            background-position: -24px -21px;
+                        }
+                        .last{
+                            background-position: -48px -21px;
+                        }
+                    }
+                    img{
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: -1px;
+                        min-width: 160px;
+                        padding: 12px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #232628;
+                        background: #fff;
+                        border: 1px solid #E9ECF0;
+                        border-top-color: transparent;
+                        text-align: center;
+                        z-index: 1000;
+                    }
+                    &:hover{
+                        img{
+                            display: block;
+                        }
+                        &:not(:first-child){
+                            background: white;
+                        }
+                        a{
+                            color: #FF734C;
+                        }
+                    }
+                }
+                :first-child{
+                    padding-left: 0;
+                }
+            }
+            //左侧导航 over
+            //右侧导航
+            .nav-right{
+                list-style: none;
+                float: right;
+                .icon-box{
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    margin-left: 5px;
+                    background-image: url(http://img02.hua.com/pc/pimg/home/top_nav_arrow.png);
+                    background-position: top center;
+                    background-size: 8px 8px;   
+                    transition: transform 0.2s;
+                }
+                .img{
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: -1px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #232628;
+                    background: #fff;
+                    border: 1px solid #E9ECF0;
+                    border-top-color: transparent;
+                    text-align: center;
+                    z-index: 1000;
+                    width: 100%;
+                    min-width: 100%;
+                    max-width: 100%;
+                    padding: 6px 0;
+                    p{
+                        display: block;
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #71797F;
+                        cursor: pointer;
+                        &:hover{
+                            color: #FF734C;
+                        }
+                    }
+                }
+                li:first-child{
+                    padding: 0;
+                }
+                li:hover{
+                    a{
+                        color: #FF734C;
+                    }
+                    .img{
+                        display: block;
+                       
+                    }
+                    .icon-box{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            //右侧导航over
+        }
+    }
+    //头部导航  over
+
+
+     //搜索栏
+    #header{
+        background: #F7F9FA;
+        height: 120px;
+        .header-contener{
+            margin: 0 auto;
+            width: 1200px;
+            height: 100%;
+            position: relative;
+          //logo
+            .logo{
+                float: left;
+                width: 238px;
+                height: 100%;
+            }
+            .logo{
+                width: 238px;
+                height: 60px;
+                margin-top: 30px;
+                background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                background-repeat: no-repeat;
+                background-position: 0 -248px;
+            }
+            //logo over
+            //form 搜索
+            .search-box{
+                width: 440px;
+                margin: 0 auto;
+                padding-top: 25px;
+                font-size: 0;
+                form{
+                    display: block;
+                    margin-top: 0;
+                    div{
+                        position: relative;
+                        width: 440px;
+                        height: 48px;
+                        border-radius: 24px;
+                        border: 2px solid #FF734C;
+                        overflow: hidden;
+                        //图标
+                        .search-box-icon{
+                            display: inline-block;
+                            width: 54px;
+                            height: 100%;
+                            vertical-align: top;
+                            text-align: center;
+                            border-style: none;
+                            span{
+                                width: 16px;
+                                height: 16px;
+                                margin-top: 16px;
+                                display: inline-block;
+                                background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                                background-repeat: no-repeat;
+                                vertical-align: top;
+                                background-position: 0 -48px;
+                            }
+                        }
+                        //图标over
+                        //input
+                        input{
+                            width: 264px;
+                            height: 100%;
+                            font-size: 14px;
+                            border: none;
+                            background-color: inherit;
+                        }
+                        //input  over
+                                     //搜索提交按钮
+                  .btn-box{
+                    position: absolute;
+                    top: -2px;
+                    right: -2px;
+                    width: 118px;
+                    height: 48px;
+                    .btn{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 24px 0 0 24px;
+                        outline: none;
+                        font-size: 18px;
+                        font-weight: bold;
+                        background-color: #FF734C;
+                        color: white;
+                        border-style: none;
+                    }
+                }
+                //搜索提交按钮  over
+                    }
+                }
+            }
+            .search-box-hotwords{
+                margin-top: 8px;
+                margin-left: 44px;
+                font-size: 12px;
+                line-height: 16px;
+                color: #B4BABF;
+                a{
+                    margin: 0 12px;
+                    color: #71797F;
+                }
+            }
+            //form over
+            // 客服
+            .help{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 350px;
+                padding-top: 25px;
+                line-height: 18px;
+                text-align: right;
+                .help-item{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #71797F;
+                    vertical-align: top;
+                    .icon{
+                        width: 24px;
+                        height: 24px;
+                        margin-top: 12px;
+                        margin-right: 8px;
+                        display: inline-block;
+                        background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                        background-repeat: no-repeat;
+                        vertical-align: top;
+                    }
+                    .icon-phone{
+                        background-position: 0 -102px;
+                    }
+                    .icon-ready{
+                        background-position: -34px -102px;
+                    }
+                    p{
+                        display: inline-block;
+                        margin-top: 15px;
+                        vertical-align: top;
+                        text-align: left;
+                    }
+                    &+.help-item{
+                        margin-left: 40px;
+                    }
+                }
+            }
+            // 客服 over
+        }
+    }
+    //搜索栏  over
+    // 导航
+    #navi{
+        background: #F7F9FA;
+        position: relative;
+        min-width: 1200px;
+        height: 52px;
+        .navi-container{
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            .navi-nav{
+                margin: 0 0 0 265px;
+                height: 100%;
+                list-style: none;
+                >li{
+                    float: left;
+                    margin: 0 14px;
+                    font-size: 18px;
+                    color: #232628;
+                    font-weight: bold;
+                    line-height: 52px;
+                    a{
+                        &:hover{
+                                color: #FF734C;
+                        }
+                    }
+                }
+            }
+            .navi-categorys{
+                position: relative;
+                width: 240px;
+                height: 52px;
+                float: left;
+                border-radius: 12px 12px 0 0;
+                background-color: #FF734C;
+                background: linear-gradient(90deg, #ff734c 0%, #ff3d12 100%);
+                // 分类菜单头部盒子
+                .categorys-title{
+                    padding-left: 24px;
+                    font-size: 18px;
+                    line-height: 52px;
+                    font-weight: bold;
+                    a{
+                        color: #fff;
+                    }
+                    .icon{
+                        width: 24px;
+                        height: 24px;
+                        margin-top: 14px;
+                        margin-right: 4px;
+                        display: inline-block;
+                        background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                        background-repeat: no-repeat;
+                        vertical-align: top;
+                    }
+                    .icon-category{
+                        background-position: -68px -102px;
+                    }
+
+                }
+            }
+        }
+
+    }
+    //导航 over
+    //小导航
+    .nav-mini{
+        height: 44px;
+        font-size: 13px;
+        line-height: 44px;
+        color: #71797F;
+        border-top: 1px solid #E9ECF0;
+        .nav-mbox{
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            a{
+                color: #71797F;
+                &:hover{
+                    color: #FF734C;
+                }
+            }
+        }
+    }
+    //小导航 over
+
+    //商品
+    .product-wrap{
+        font-size: 0;
+        .product-intro {
+            width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 48px;
+            //图片框
+            .product-preview {
+                display: inline-block;
+                width: 460px;
+                vertical-align: top;
+                .preview{
+                    //大图
+                    .preview-bigimage {
+                        position: relative;
+                        width: 100%;
+                        height: 500px;
+                        text-align: center;
+                        overflow: hidden;
+                        border: 1px solid #E9ECF0;
+                        .swiper-container {
+                            height: 100%;
+                            .swiper-slide {
+                                position: relative;
+                                float: left;
+                                img{
+                                    width: 100%;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                        .swiper-slide-active img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 100%;
+                        }
+                    }
+                    //大图over
+                    //tabs
+                    .preview-list {
+                        height: 80px;
+                        margin-top: 20px;
+                        overflow: hidden;
+                        .preview-list-item {
+                            position: relative;
+                            display: inline-block;
+                            width: 80px;
+                            height: 80px;
+                            margin-left: 46px;
+                            overflow: hidden;
+                            text-align: center;
+                            border: 1px solid #E9ECF0;
+                            padding: 1px;
+                            cursor: pointer;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            img{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                width: 76px;
+                            }
+                        }
+                        .preview-list-item.active {
+                            border: 2px solid #FF734C;
+                            padding: 0;
+                        }
+                    }
+                    //tabs over
+                }
+            }
+             //图片框 over
+             //详情
+             .product-info{
+                position: relative;
+                display: inline-block;
+                width: 740px;
+                min-height: 512px;
+                padding-left: 100px;
+                padding-bottom: 94px;
+                vertical-align: top;
+                //商品头
+                .title{
+                    .title-name{
+                        font-size: 20px;
+                        line-height: 32px;
+                        color: #232628;
+                        font-weight: bold;
+                    }
+                    .title-desc{
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: #232628;
+                    }
+                    .title-point{
+                        font-size: 15px;
+                        line-height: 26px;
+                        color: #FF734C;
+                    }
+                }
+                //商品头 over
+                //价钱详情
+                .price{
+                    position: relative;
+                    margin-top: 12px;
+                    padding: 0 0 12px;
+                    background-color: #F7F9FA;
+                    border-top: 1px dotted #B4BABF;
+                    .price-sell-price{
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        padding-top: 6px;
+                        .price-label{
+                            display: inline-block;
+                            width: 80px;
+                            padding-left: 12px;
+                            font-size: 13px;
+                            line-height: 24px;
+                            color: #71797F;
+                            vertical-align: middle;
+                        }
+                        //价格
+                        .sell-price{
+                            display: inline-block;
+                            font-size: 18px;
+                            color: #FF5526;
+                            font-weight: bold;
+                            vertical-align: bottom;
+                            .discount-tag-list{
+                                display: inline-block;
+                                vertical-align: top;
+                            }
+                            .sellPrice{
+                                font-size: 28px;
+                                line-height: 32px;
+                            }
+                             .original-price{
+                                display: inline-block;
+                                font-size: 13px;
+                                margin-left: 20px;
+                                line-height: 24px;
+                                color: #71797F;
+                                font-weight: normal;
+                                vertical-align: bottom;
+                                s{
+                                    margin-left: 2px;
+                                }
+                            }
+                        }
+                        //价格 over
+                        .sale-count{
+                            position: absolute;
+                            top: 8px;
+                            right: 10px;
+                            font-size: 13px;
+                            color: #232628;
+                            span{
+                                color: #FF734C;
+                            }
+                        }
+                        //配送时间
+                        .price-item{
+                            .price-label{
+                                display: inline-block;
+                                width: 80px;
+                                padding-left: 12px;
+                                font-size: 13px;
+                                line-height: 24px;
+                                color: #71797F;
+                                vertical-align: middle;
+                            }
+                        }
+                        //配送时间 over             
+                    }
+                           //购买
+                           .price-item {
+                            margin-top: 6px;
+                            .price-label{
+                                line-height: 18px;
+                                display: inline-block;
+                                width: 80px;
+                                padding-left: 12px;
+                                font-size: 13px;
+                                color: #71797F;
+                                vertical-align: top;
+                            }
+                            .discounts{
+                                display: inline-block;
+                                vertical-align: bottom;
+                                .discounts-title{
+                                    display: inline-block;
+                                    font-size: 13px;
+                                    line-height: 18px;
+                                    color: #232628;
+                                    .wxappPrice{
+                                        margin-left: 3px;
+                                    }
+                                }
+                                .qr-dropdown{
+                                    position: relative;
+                                    display: inline-block;
+                                    height: 18px;
+                                    vertical-align: top;
+                                    line-height: 18px;
+                                    margin-left: 16px;
+                                    text-align: center;
+                                    box-sizing: border-box;
+                                    >a{
+                                        height: 18px;
+                                        font-size: 13px;
+                                        color: rgba(35, 38, 40, 0.9);
+                                        display: inline-block;
+                                        .icon-arrow-right{
+                                            background-position: -68px 0;
+                                        }
+                                        .icon{
+                                            width: 12px;
+                                            height: 12px;
+                                            margin-top: 3px;
+                                            margin-left: 3px;
+                                            display: inline-block;
+                                            background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                                            background-repeat: no-repeat;
+                                            vertical-align: top;
+                                        }
+                                    }
+                                    .qr-dropdown-box{
+                                        display: none;
+                                        position: absolute;
+                                        top: 100%;
+                                        left: 0;
+                                        min-width: 122px;
+                                        padding: 12px;
+                                        text-align: center;
+                                        font-size: 0;
+                                        background: #F7F9FA;
+                                        z-index: 1012;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                        img{
+                                            width: 98px;
+                                            vertical-align: middle;
+                                            border: 0;
+                                        }
+                                        p{
+                                            margin-top: 6px;
+                                            font-size: 12px;
+                                            color: #71797F;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        //购买 over
+                }
+                //价钱详情over
+             }
+             //详情 over
+             //花语
+             .huayu{
+                padding: 12px 0;
+                .huayu-item{
+                    .huayu-label{
+                        display: inline-block;
+                        width: 48px;
+                        margin-right: 32px;
+                        line-height: 24px;
+                        color: #71797F;
+                        font-size: 13px;
+                        text-align: center;
+                        vertical-align: top;
+                    }
+                    .huayu-content{
+                        display: inline-block;
+                        width: 560px;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: rgba(35, 38, 40, 0.9);
+                        vertical-align: top;
+                        text-align: justify;
+                    }
+                }
+             }
+             //花语 over
+             //配送
+             .delivery{
+                border-top: 1px dotted #B4BABF;
+                .delivery-item{
+                    margin: 10px 0;
+                    .delivery-content{
+                        font-size: 13px;
+                        line-height: 24px;
+                        vertical-align: top;
+                    }
+                    .delivery-content-time {
+                        display: block;
+                        padding-left: 80px;
+                        color: #71797F;
+                    }
+                    .delivery-address{
+                        float: none;
+                        position: relative;
+                        display: inline-block;
+                        min-width: 164px;
+                        height: 24px;
+                        margin-right: 16px;
+                        .delivery-area{
+                            position: relative;
+                            display: inline-block;
+                            width: 100%;
+                            padding: 0 8px;
+                            font-size: 13px;
+                            color: #232628;
+                            line-height: 22px;
+                            border: 1px solid #E9ECF0;
+                            z-index: 1009;
+                            .delivery-area-text.active {
+                                color: #FF734C;
+                            }
+                            .icon-deliarr{
+                                width: 10px;
+                                height: 10px;
+                                margin-top: 5px;
+                                margin-left: 5px;
+                                display: inline-block;
+                                background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                                background-repeat: no-repeat;
+                                vertical-align: top;
+                                float: right;
+                            }
+                            span.icon-deliarr {
+                                background-position: 0 -403px;
+                                transition: transform 0.1s;
+                            }
+                        }
+                        .delivery-area-pop {
+                            position: relative;
+                            float: none;
+                            height: 0;
+                            .content{
+                                top: 100%;
+                                left: 0;
+                                padding: 12px;
+                                border-color: #E9ECF0;
+                                z-index: 1010;
+                                display: none;
+                                position: absolute;
+                                width: 380px;
+                                background: #fff;
+                                border: 1px solid #ccc;
+                                .tab{
+                                    >li{
+                                        margin-right: 5px;
+                                        border: 1px solid #ddd;
+                                        padding: 2px 10px;
+                                         background: #fff;
+                                        color: #005aa0;
+                                        font: 700 14px 'microsoft yahei';
+                                        border-bottom: none;
+                                        cursor: pointer;
+                                    }
+                                    .current{
+                                        border: 2px solid #ff6a00;
+                                        border-bottom: 2px solid #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .text-primary{
+                        color: #ff6a00;
+                    }
+                    .delivery-label{
+                        width: 80px;
+                        padding-left: 8px;
+                        color: #71797F;
+                        display: inline-block;
+                        font-size: 13px;
+                        line-height: 24px;
+                        vertical-align: top;
+                    }
+                    .delivery-content {
+                        display: inline-block;
+                        font-size: 13px;
+                        line-height: 24px;
+                        vertical-align: top;
+                        color: #232628;
+                    }
+                    .delivery-range-detail{
+                        position: relative;
+                        width: 560px;
+                        max-height: 24px;
+                        overflow: hidden;
+                        p{
+                            display: block;
+                            padding-right: 20px;
+                            color: rgba(35, 38, 40, 0.9);
+                            white-space: normal;
+                        }
+                        .icon{
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            right: 0;
+                            bottom: 5px;
+                            margin-top: 6px;
+                            margin-right: 4px;
+                            background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+                            background-repeat: no-repeat;
+                            vertical-align: top;
+                        }
+                        .icon-arrow{
+                            background-position: 0 -403px;
+                            transform: rotate(180deg);
+                            transition: transform 0.1s;
+                        }
+                    }
+                 }
+                
+             }
+         //配送 over
+         //加入购物车
+         .btn-group{
+            position: absolute;
+            bottom: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            .btn-group-item {
+                display: inline-block;
+                width: 208px;
+                height: 56px;
+                margin-right: 40px;
+                border-radius: 28px;
+                font-size: 22px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .btn-soonbuy {
+                color: #fff;
+                line-height: 56px;
+                background: linear-gradient(90deg, #ff734c 0%, #ff3d12 100%);
+            }
+            .btn-addcart {
+                color: #FF734C;
+                line-height: 54px;
+                border: 1px solid rgba(255, 115, 76, 0.2);
+                background: #FFF0EC;
+                span.icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-top: 15px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                    background-repeat: no-repeat;
+                    vertical-align: top;
+                }
+                .icon-addcartbtn{
+                    background-position: -306px -102px;
+                }
+            }
+            .btn-group-guanzhu{
+                display: inline-block;
+                margin-top: 18px;
+                font-size: 14px;
+                color: #232628;
+                line-height: 20px;
+                a{
+                    span.icon{
+                        width: 16px;
+                        height: 16px;
+                        margin-top: 4px;
+                        margin-right: 8px;
+                        display: inline-block;
+                        background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                        background-repeat: no-repeat;
+                        vertical-align: top;
+                    }
+                    span.icon-collect {
+                        background-position: -52px -48px;
+                    }
+                }
+            }
+         }
+         // 加入购物车 over
+        }
+    }
+    //商品 over
+
+    //详情渲染
+    .wrap{
+        width: 1200px;
+        margin: 0 auto;
+        //左侧
+        .aside {
+            float: left;
+            width: 240px;
+            .aside-item {
+                border: 1px solid #E9ECF0;
+                margin-bottom: 12px;
+                .aside-hd {
+                    height: 40px;
+                    padding-left: 12px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    color: #71797F;
+                    background: #F7F9FA;
+                }
+                .aside-bd {
+                    padding: 12px;
+                    color: #232628;
+                    .hot-list{
+                        clear: both;
+                        padding: 0;
+                        list-style: none;
+                        .hot-item{
+                            margin-bottom: 12px;
+                            a{
+                                .hot-item-pic{
+                                    width: 100%;
+                                    img{
+                                        max-width: 100%;
+                                        vertical-align: middle;
+                                        border: 0;
+                                    }
+                                }
+                                .hot-item-info{
+                                    padding: 4px;
+                                    text-align: center;
+                                    .p-title{
+                                        line-height: 34px;
+                                        font-size: 14px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .p-price{
+                                        line-height: 26px;
+                                        font-weight: bold;
+                                        font-size: 14px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .browse-list {
+                        clear: both;
+                        padding: 0;
+                        list-style: none;
+                        
+                        .browse-item {
+                            height: 64px;
+                            margin-bottom: 12px;
+                            overflow: hidden;
+                            clear: both;
+                            a{
+                                .browse-item-pic {
+                                    float: left;
+                                    width: 64px;
+                                    height: 64px;
+                                    img{
+                                        max-width: 100%;
+                                        vertical-align: middle;
+                                        border: 0;
+                                    }
+                                }
+                                .browse-item-info{
+                                    margin-left: 76px;
+                                    .p-title{
+                                        line-height: 34px;
+                                        font-size: 14px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .p-price{
+                                        line-height: 26px;
+                                        font-weight: bold;
+                                        font-size: 14px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //左侧 over
+        //右侧
+        .detail{
+            float: left;
+            width: 950px;
+            margin-left: 10px;
+            .detail-item{
+                position: relative;
+                width: 950px;
+                margin-bottom: 40px;
+                border: 1px solid #E9ECF0;
+                font-size: 0;
+                
+                //header
+                .detail-hd{
+                    width: 948px;
+                    height: 52px;
+                    background: #fff;
+                    overflow: hidden;
+                    .detail-hd-wp{
+                        position: relative;
+                        width: 100%;
+                        border-bottom: 1px solid #E9ECF0;
+                        ul{
+                            display: inline-block;
+                            padding: 0;
+                            list-style: none;
+                            li{
+                                display: inline-block;
+                                padding: 0 48px;
+                                font-size: 16px;
+                                line-height: 50px;
+                                color: #232628;
+                                vertical-align: top;
+                                cursor: pointer;
+                                span{
+                                    color: #FF734C;
+                                }
+                                &+li{
+                                    border-left: 1px solid #E9ECF0;
+                                }
+                            }
+                            .active{
+                                position: relative;
+                                &::before{
+                                    top: 0;
+                                    height: 3px;
+                                    background: #FF734D;
+                                }
+                                &::after{
+                                    bottom: -1px;
+                                    height: 1px;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        .fixed-group{
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            .fixed-price{
+                                display: inline-block;
+                                margin-right: 24px;
+                                font-size: 16px;
+                                color: #232628;
+                                font-weight: bold;
+                                line-height: 51px;
+                                vertical-align: top;
+                                span{
+                                    font-size: 24px;
+                                }
+                            }
+                            .fixed-btn{
+                                display: inline-block;
+                                width: 160px;
+                                height: 100%;
+                                font-size: 20px;
+                                line-height: 51px;
+                                color: #fff;
+                                font-weight: bold;
+                                text-align: center;
+                                vertical-align: top;
+                                background-color: #FF3D12;
+                                background: linear-gradient(90deg, #ff734c 0%, #ff3d12 100%);
+                            }
+                        }
+                    }
+                }  
+            }
+            //header over
+            //内容
+            .detail-bd{
+                //产品参数
+                .detail-product-info{
+                    width: 850px;
+                    padding: 46px 0;
+                    margin: 0 auto;
+                    border-bottom: 1px dotted #E9ECF0;
+                    .detail-product-info-l{
+                        position: relative;
+                        display: inline-block;
+                        width: 110px;
+                        height: 100%;
+                        vertical-align: top;
+                        p{
+                            font-size: 14px;
+                            color: #71797F;
+                            height: 20px;
+                            vertical-align: middle;
+                        }
+                    }
+                    .detail-product-info-r{
+                        display: inline-block;
+                        width: 738px;
+                        padding-left: 48px;
+                        border-left: 1px solid #E9ECF0;
+                        vertical-align: top;
+                        .detail-product-info-item{
+                            margin-bottom: 10px;
+                            .detail-product-info-label{
+                                display: inline-block;
+                                width: 70px;
+                                color: #232628;
+                                vertical-align: top;
+                                font-size: 13px;
+                                line-height: 16px;
+                            }
+                            .detail-product-info-detail{
+                                display: inline-block;
+                                 width: 618px;
+                                color: #71797F;
+                                font-size: 13px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+                //参数over
+                //评价
+                .detail-comment-hd{
+                    width: 930px;
+                    margin: 0 auto;
+                    box-shadow: 0px 8px 8px 0px rgba(233, 236, 240, 0.33);
+                    .detail-comment-navi{
+                        padding: 38px 0;
+                        text-align: center;
+                        .detail-comment-navi-item{
+                            display: inline-block;
+                            padding: 0 26px;
+                            margin: 0 16px;
+                            font-size: 14px;
+                            color: #232628;
+                            line-height: 44px;
+                            border: 1px solid #B4BABF;
+                            border-radius: 22px;
+                            span{
+                                color: #FF734C;
+                            }
+                        }
+                    }
+                }
+                .detail-comment-bd{
+                   .detail-comment-list{
+                       .detail-comment-item{
+                           padding: 40px 0;
+                            border-bottom: 1px solid #E9ECF0;
+                            .detail-comment-item-user{
+                                display: inline-block;
+                                width: 160px;
+                                text-align: center;
+                                vertical-align: top;
+                                .detail-comment-item-avatar{
+                                    width: 48px;
+                                    height: 48px;
+                                    margin: 0 auto;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: auto;
+                                        vertical-align: middle;
+                                    }
+                                }
+                                p{
+                                    margin-top: 12px;
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    color: #71797F;
+                                }
+                            }
+                            .detail-comment-item-main{
+                                display: inline-block;
+                                .detail-comment-item-imgviewer{
+                                    display: none;
+                                }
+                                .detail-comment-item-btm{
+                                    margin-top: 12px;
+                                    .detail-comment-item-addr{
+                                        margin-right: 12px;
+                                        font-size: 12px;
+                                        color: #B4BABF;
+                                    }
+                                    .detail-comment-item-time{
+                                        margin-right: 12px;
+                                        font-size: 12px;
+                                        color: #B4BABF;
+                                    }
+                                }
+                                .detail-comment-item-rating{
+                                    span.icon {
+                                        width: 96px;
+                                        height: 16px;
+                                        display: inline-block;
+                                        background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                                        background-repeat: no-repeat;
+                                        vertical-align: top;
+                                    }
+                                    .icon-commentstar{
+                                        background-position: -106px -48px;
+                                    }
+                                }
+                                .detail-comment-item-content{
+                                    width: 630px;
+                                    margin-top: 16px;
+                                    p{
+                                        font-size: 14px;
+                                        color: #232628;
+                                    }
+                                }
+                                .detail-comment-item-imglist{
+                                    margin-top: 16px;
+                                    .detail-comment-item-img{
+                                        display: inline-block;
+                                        width: 80px;
+                                        height: 80px;
+                                        padding: 0;
+                                        line-height: 78px;
+                                        margin-right: 10px;
+                                        vertical-align: middle;
+                                        overflow: hidden;
+                                        text-align: center;
+                                        border: 1px solid #E9ECF0;
+                                        img{
+                                            max-width: 100%;
+                                            max-height: 100%;
+                                            vertical-align: middle;
+                                        }
+                                    }
+                                    
+                                }
+                                .tm-m-photos-thumb{
+                                    zoom: 1;
+                                    list-style-type: none;
+                                    li{
+                                        float: left;
+                                        position: relative;
+                                        transition: border-color .2s ease-out;
+                                        img{
+                                            cursor: url(https://img02.hua.com/pc/assets/img/img-zoom-in.png), url(https://assets.alicdn.com/img/common/zoom_in.cur), auto;
+                                        }
+                                    }
+                                }
+                            }
+                            .tm-m-photos{
+                                zoom: 1;
+                            }
+                       }
+                   }
+                }
+                //评价 over
+                .detail-product-content{
+                    padding: 48px 50px 60px;
+                    text-align: center;
+                    img{
+                        max-width: 100%;
+                        vertical-align: middle;
+                        border: 0;
+                    }
+                    .disseminate{
+                        width: 750px;
+                        margin: 20px auto 0;
+                        background: #f7f9fa;
+                        .point{
+                            .point-title{
+                                position: relative;
+                                padding: 24px 16px 14px;
+                                text-align: center;
+                                font-size: 18px;
+                                font-weight: bold;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                &::after{
+                                    position: absolute;
+                                    content: "";
+                                    bottom: 8px;
+                                    left: 0;
+                                    right: 0;
+                                    width: 48px;
+                                    margin: 0 auto;
+                                    height: 1px;
+                                    background: #D8D8D8;
+                                }
+                            }
+                            .point-body{
+                                padding-bottom: 18px;
+                                p{
+                                    width: 686px;
+                                    margin: 0 auto;
+                                    font-size: 12px;
+                                }
+                                img{
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //内容over
+            
+        }
+        // 右侧 over
+    }
+    //详情渲染 over
+
+}
+// 大盒子over

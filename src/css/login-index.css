@@ -21,117 +21,167 @@
   background: url("https://img02.hua.com/pc/images/pc_newuser_order_100.png?v") 50% 0px no-repeat;
   height: 80px;
 }
-#home #top-nav {
-  min-width: 1200px;
-  height: 40px;
-  font-size: 12px;
-  color: #71797F;
+#home .top-nav {
   background-color: #F3F5F7;
+  width: 100%;
+  height: 40px;
 }
-#home #top-nav .top-nav-wrapper {
+#home .top-nav .nav-box {
   width: 1200px;
   margin: 0 auto;
+  height: 100%;
 }
-#home #top-nav .top-nav-wrapper .top-nav-l {
-  float: left;
-  list-style: none;
-}
-#home #top-nav .top-nav-wrapper .top-nav-l .menu {
+#home .top-nav .nav-box li {
   padding: 0 16px;
-  line-height: 40px;
   float: left;
+  line-height: 40px;
+  position: relative;
 }
-#home #top-nav .top-nav-wrapper .top-nav-l .menu:first-child {
-  padding-left: 0;
-}
-#home #top-nav .top-nav-wrapper .top-nav-l .menu a {
+#home .top-nav .nav-box li a {
   color: #71797F;
   font-size: 12px;
 }
-#home #top-nav .top-nav-wrapper .top-nav-l .menu a .icon {
+#home .top-nav .nav-box li span {
+  color: #71797F;
+  font-size: 12px;
+}
+#home .top-nav .nav-box .nav-left {
+  list-style: none;
+  float: left;
+}
+#home .top-nav .nav-box .nav-left li a .icon {
   width: 14px;
   height: 14px;
   margin-top: 12px;
   margin-right: 4px;
   display: inline-block;
-  background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+  background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   vertical-align: top;
-}
-#home #top-nav .top-nav-wrapper .top-nav-l .menu a .icon-star {
   background-position: 0 -21px;
 }
-#home #top-nav .top-nav-wrapper .top-nav-l .menu a .icon-weixin {
+#home .top-nav .nav-box .nav-left li a .next {
   background-position: -24px -21px;
 }
-#home #top-nav .top-nav-wrapper .top-nav-l .menu a .icon-mobile {
+#home .top-nav .nav-box .nav-left li a .last {
   background-position: -48px -21px;
 }
-#home #top-nav .top-nav-wrapper .top-nav-l .menu-dropdown {
-  position: relative;
-}
-#home #top-nav .top-nav-wrapper .top-nav-r {
-  float: right;
-  list-style: none;
-}
-#home #top-nav .top-nav-wrapper .top-nav-r .menu {
-  padding: 0 16px;
-  line-height: 40px;
-  float: left;
-}
-#home #top-nav .top-nav-wrapper .top-nav-r .menu a {
-  color: #71797F;
+#home .top-nav .nav-box .nav-left li img {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  min-width: 160px;
+  padding: 12px;
   font-size: 12px;
+  line-height: 18px;
+  color: #232628;
+  background: #fff;
+  border: 1px solid #E9ECF0;
+  border-top-color: transparent;
+  text-align: center;
+  z-index: 1000;
 }
-#home #top-nav .top-nav-wrapper .top-nav-r .menu a .text-primary {
-  color: #ff6a00;
+#home .top-nav .nav-box .nav-left li:hover img {
+  display: block;
 }
-#home #top-nav .top-nav-wrapper .top-nav-r .login a + a {
-  margin-left: 12px;
+#home .top-nav .nav-box .nav-left li:hover:not(:first-child) {
+  background: white;
 }
-#home #top-nav .top-nav-wrapper .top-nav-r .menu-dropdown {
-  position: relative;
+#home .top-nav .nav-box .nav-left li:hover a {
+  color: #FF734C;
 }
-#home #top-nav .top-nav-wrapper .top-nav-r .menu-dropdown .icon-arrow {
+#home .top-nav .nav-box .nav-left :first-child {
+  padding-left: 0;
+}
+#home .top-nav .nav-box .nav-right {
+  list-style: none;
+  float: right;
+}
+#home .top-nav .nav-box .nav-right .icon-box {
   display: inline-block;
   width: 8px;
   height: 8px;
   margin-left: 5px;
-  background-image: url(//img02.hua.com/pc/pimg/home/top_nav_arrow.png);
+  background-image: url(http://img02.hua.com/pc/pimg/home/top_nav_arrow.png);
   background-position: top center;
   background-size: 8px 8px;
+  transition: transform 0.2s;
+}
+#home .top-nav .nav-box .nav-right .img {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #232628;
+  background: #fff;
+  border: 1px solid #E9ECF0;
+  border-top-color: transparent;
+  text-align: center;
+  z-index: 1000;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 6px 0;
+}
+#home .top-nav .nav-box .nav-right .img p {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #71797F;
+  cursor: pointer;
+}
+#home .top-nav .nav-box .nav-right .img p:hover {
+  color: #FF734C;
+}
+#home .top-nav .nav-box .nav-right li:first-child {
+  padding: 0;
+}
+#home .top-nav .nav-box .nav-right li:hover a {
+  color: #FF734C;
+}
+#home .top-nav .nav-box .nav-right li:hover .img {
+  display: block;
+}
+#home .top-nav .nav-box .nav-right li:hover .icon-box {
+  transform: rotate(180deg);
 }
 #home #header {
-  min-width: 1200px;
   height: 120px;
 }
-#home #header .header-container {
-  position: relative;
-  width: 1200px;
+#home #header .header-contener {
   margin: 0 auto;
-  font-size: 0;
+  width: 1200px;
+  height: 100%;
+  position: relative;
 }
-#home #header .header-container .logo {
+#home #header .header-contener .logo {
   float: left;
   width: 238px;
   height: 100%;
 }
-#home #header .header-container .logo .logo-nav {
-  display: inline-block;
+#home #header .header-contener .logo {
   width: 238px;
   height: 60px;
   margin-top: 30px;
-  background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+  background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   background-position: 0 -248px;
 }
-#home #header .header-container .search-box {
+#home #header .header-contener .search-box {
   width: 440px;
   margin: 0 auto;
   padding-top: 25px;
   font-size: 0;
 }
-#home #header .header-container .search-box .group {
+#home #header .header-contener .search-box form {
+  display: block;
+  margin-top: 0;
+}
+#home #header .header-contener .search-box form div {
   position: relative;
   width: 440px;
   height: 48px;
@@ -139,42 +189,39 @@
   border: 2px solid #FF734C;
   overflow: hidden;
 }
-#home #header .header-container .search-box .group .search-box-icon {
+#home #header .header-contener .search-box form div .search-box-icon {
   display: inline-block;
   width: 54px;
   height: 100%;
   vertical-align: top;
   text-align: center;
+  border-style: none;
 }
-#home #header .header-container .search-box .group .search-box-icon .icon-search {
+#home #header .header-contener .search-box form div .search-box-icon span {
   width: 16px;
   height: 16px;
   margin-top: 16px;
-  background-position: 0 -48px;
   display: inline-block;
-  background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+  background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   vertical-align: top;
+  background-position: 0 -48px;
 }
-#home #header .header-container .search-box .group input {
+#home #header .header-contener .search-box form div input {
   width: 264px;
   height: 100%;
   font-size: 14px;
   border: none;
   background-color: inherit;
-  outline: none;
-  font-family: inherit;
-  line-height: inherit;
-  color: inherit;
 }
-#home #header .header-container .search-box .group .search-box-btn {
+#home #header .header-contener .search-box form div .btn-box {
   position: absolute;
   top: -2px;
   right: -2px;
   width: 118px;
   height: 48px;
 }
-#home #header .header-container .search-box .group .search-box-btn .btn {
+#home #header .header-contener .search-box form div .btn-box .btn {
   width: 100%;
   height: 100%;
   border-radius: 24px 0 0 24px;
@@ -182,30 +229,21 @@
   font-size: 18px;
   font-weight: bold;
   background-color: #FF734C;
-  color: #ffffff;
-  border-color: #ff6a00;
-  display: inline-block;
-  margin-bottom: 0;
-  touch-action: manipulation;
-  cursor: pointer;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  text-transform: none;
-  overflow: visible;
+  color: white;
+  border-style: none;
 }
-#home #header .header-container .search-box .hotwords {
+#home #header .header-contener .search-box-hotwords {
   margin-top: 8px;
   margin-left: 44px;
   font-size: 12px;
   line-height: 16px;
   color: #B4BABF;
 }
-#home #header .header-container .search-box .hotwords a {
+#home #header .header-contener .search-box-hotwords a {
   margin: 0 12px;
   color: #71797F;
 }
-#home #header .header-container .serviceDefault {
+#home #header .header-contener .help {
   position: absolute;
   top: 0;
   right: 0;
@@ -214,40 +252,35 @@
   line-height: 18px;
   text-align: right;
 }
-#home #header .header-container .serviceDefault .service-item {
+#home #header .header-contener .help .help-item {
   display: inline-block;
   font-size: 14px;
   color: #71797F;
   vertical-align: top;
 }
-#home #header .header-container .serviceDefault .service-item .service-item-info {
-  display: inline-block;
-  margin-top: 15px;
-  vertical-align: top;
-  text-align: left;
-}
-#home #header .header-container .serviceDefault .service-item .icon {
+#home #header .header-contener .help .help-item .icon {
   width: 24px;
   height: 24px;
   margin-top: 12px;
   margin-right: 8px;
   display: inline-block;
-  background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+  background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   vertical-align: top;
 }
-#home #header .header-container .serviceDefault .service-item .icon-phone {
+#home #header .header-contener .help .help-item .icon-phone {
   background-position: 0 -102px;
 }
-#home #header .header-container .serviceDefault .service-item a {
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-#home #header .header-container .serviceDefault .service-item .icon-headset {
+#home #header .header-contener .help .help-item .icon-ready {
   background-position: -34px -102px;
 }
-#home #header .header-container .serviceDefault .service-item + .service-item {
+#home #header .header-contener .help .help-item p {
+  display: inline-block;
+  margin-top: 15px;
+  vertical-align: top;
+  text-align: left;
+}
+#home #header .header-contener .help .help-item + .help-item {
   margin-left: 40px;
 }
 #home #navi {
@@ -310,6 +343,9 @@
 }
 #home #navi .navi-container .navi-categorys .cate .dropdown-cate-item a {
   color: #fff;
+}
+#home #navi .navi-container .navi-categorys .cate .dropdown-cate-item a:hover {
+  color: #FF734C;
 }
 #home #navi .navi-container .navi-categorys .cate .dropdown-cate-item .right-pop {
   display: none;
@@ -378,7 +414,7 @@
   height: 12px;
   margin-top: 4px;
   display: inline-block;
-  background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+  background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   vertical-align: top;
 }
@@ -395,6 +431,24 @@
   line-height: 24px;
   padding: 0 4px;
 }
+#home #navi .navi-container .navi-categorys .cate .cate-pop:hover {
+  background: #fff;
+}
+#home #navi .navi-container .navi-categorys .cate .cate-pop:hover h4 {
+  color: #000;
+}
+#home #navi .navi-container .navi-categorys .cate .cate-pop:hover a {
+  color: #71797F;
+}
+#home #navi .navi-container .navi-categorys .cate .cate-pop:hover .right-pop {
+  display: block;
+}
+#home #navi .navi-container .navi-categorys .cate .cate-pop a {
+  color: #fff;
+}
+#home #navi .navi-container .navi-categorys .cate .cate-pop a:hover {
+  color: #FF734C;
+}
 #home #navi .navi-container .navi-nav {
   margin: 0 0 0 265px;
   height: 100%;
@@ -408,25 +462,81 @@
   font-weight: bold;
   line-height: 52px;
 }
+#home #navi .navi-container .navi-nav > li a:hover {
+  color: #FF734C;
+}
 #home .sliders {
   position: relative;
   min-width: 1200px;
   height: 480px;
 }
-#home .sliders .sliders-imgs {
-  position: relative;
+#home .sliders > div {
   width: 100%;
-  height: 480px;
-  overflow: hidden;
+  position: absolute;
 }
-#home .sliders .sliders-imgs img {
+#home .sliders > div > img {
+  float: left;
+  display: none;
   width: 100%;
   height: 480px;
+}
+#home .sliders > div .active {
+  display: block;
+}
+#home .sliders .btn-left,
+#home .sliders .btn-right {
+  height: 60px;
+  width: 60px;
+  background: #71797F;
+  border-radius: 50%;
+  opacity: 0.3;
+  display: none;
+  cursor: pointer;
+}
+#home .sliders .btn-left span,
+#home .sliders .btn-right span {
+  font-size: 3em;
+  color: white;
+  user-select: none;
+  line-height: 55px;
+}
+#home .sliders .btn-left {
+  top: 42%;
+  left: 27%;
+  text-align: center;
+}
+#home .sliders .btn-right {
+  top: 42%;
+  right: 20%;
+  text-align: center;
+}
+#home .sliders > span:last-of-type {
+  right: 0px;
+}
+#home .sliders > ol {
+  list-style: none;
+  position: absolute;
+  bottom: 10px;
+  right: 46%;
+}
+#home .sliders > ol > li {
+  height: 8px;
+  width: 8px;
+  margin: 5px;
+  background: #B4BABF;
+  float: left;
+  border-radius: 50%;
+}
+#home .sliders .active {
+  background: orange;
 }
 #home .main-sever {
   width: 1200px;
   height: 60px;
   margin: 0 auto;
+}
+#home .main-sever a:hover {
+  color: #FF734C;
 }
 #home .main-sever ul {
   font-size: 0;
@@ -539,6 +649,9 @@
 }
 #home .fl-wrapper .fl .f-server-bd .help-container > div li a {
   color: #71797F;
+}
+#home .fl-wrapper .fl .f-server-bd .help-container > div li a:hover {
+  color: #FF734C;
 }
 #home .fl-wrapper .fl .f-server-bd .help-container > div > ul {
   margin-top: 7px;
@@ -677,6 +790,9 @@
   line-height: 28px;
   color: #232628;
 }
+#home .fl-wrapper .fl .f-server-bd .articles .articles-bd .articles-list .articles-item a:hover {
+  color: #FF734C;
+}
 #home .fl-wrapper .fl .f-server-bd .f-server-list {
   padding: 20px 0;
   border-bottom: 1px solid #E9ECF0;
@@ -689,6 +805,9 @@
   line-height: 40px;
   color: #232628;
   width: 300px;
+}
+#home .fl-wrapper .fl .f-server-bd .f-server-list .f-server-item a:hover {
+  color: #FF734C;
 }
 #home .fl-wrapper .fl .f-server-bd .f-server-list .f-server-item a .icon {
   width: 40px;
@@ -744,7 +863,7 @@
   margin-top: 9px;
   margin-left: 6px;
   display: inline-block;
-  background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+  background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   vertical-align: top;
 }
@@ -756,6 +875,9 @@
   line-height: 30px;
   color: #232628;
   font-weight: bold;
+}
+#home .fl-wrapper .fl .fl-container .hd h3 a:hover {
+  color: #FF734C;
 }
 #home .fl-wrapper .fl .fl-container .hd h3 span {
   padding-left: 15px;
@@ -802,6 +924,12 @@
   background-color: #fff;
   vertical-align: top;
 }
+#home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item:hover .product-content p {
+  color: #FF734C;
+}
+#home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item:hover a .img-box img {
+  transform: scale(1.1);
+}
 #home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item a {
   outline: none;
 }
@@ -816,6 +944,7 @@
   height: auto;
   vertical-align: bottom;
   text-decoration: none;
+  transition: all 0.8s;
 }
 #home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item a .product-content {
   padding: 10px 8px 14px;
@@ -830,6 +959,11 @@
   font-size: 16px;
   line-height: 20px;
 }
+#home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item a .product-content .product-sell {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 16px;
+}
 #home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item a .product-content .product-price {
   margin-top: 5px;
   font-size: 16px;
@@ -842,12 +976,6 @@
 }
 #home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item a .product-content .product-price .price-num {
   font-family: arial,Verdana,Arial;
-}
-#home .fl-wrapper .fl .fl-container .bd .fl-products .fl-products-item a .product-content .product-sell {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #71797F;
-  line-height: 16px;
 }
 #home #floor {
   font-size: 0;
@@ -863,6 +991,9 @@
   font-size: 16px;
   line-height: 16px;
   color: #fff;
+}
+#home #floor .fl .fl-nav a:hover {
+  color: #FF734C;
 }
 #home #floor .fl .fl-nav a + a {
   padding-left: 32px;
@@ -881,6 +1012,9 @@
   font-size: 12px;
   color: #71797F;
   line-height: 22px;
+}
+#home #floor .fl .fl-site p a:hover {
+  color: #FF734C;
 }
 #home #floor .fl .ft-auth {
   margin-top: 7px;
@@ -935,10 +1069,28 @@
   line-height: 16px;
   color: #71797F;
 }
-#home #min-window {
+#home #floor .fl .fl-link a:hover {
+  color: #FF734C;
+}
+#home .window-up {
+  height: 100%;
+  width: 36px;
+  background: rgba(255, 0, 255, 0.5);
   position: fixed;
-  z-index: 9;
   right: 0;
   bottom: 0;
-  height: 100%;
+}
+#home .window-up ul {
+  margin-top: -190px;
+  height: -90%;
+}
+#home .window-up ul .user {
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background: url(http://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
 }
