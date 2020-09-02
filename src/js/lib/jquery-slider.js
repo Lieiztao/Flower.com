@@ -44,8 +44,15 @@ $.fn.extend({
                 }
             })
             elm.list.on('click', function() {
-                stop();
-                start();
+                let index = $(this).index();
+                // console.log(elm.sliderDiv.eq(index).index())
+                $(elm.sliderDiv.eq(index)).fadeTo(500, 1);
+                $(elm.sliderDiv.eq(index)).css('display', 'block').siblings().css('display', 'none');
+                $(elm.sliderDiv.eq(index)).css('display', 'block').siblings().css('opacity', 0);
+                // $(elm.sliderDiv.eq(elm.index - 1)).css('opacity', 0);
+                elm.list.eq(index).addClass('active').siblings().removeClass('active'); //点击li时 添加类名
+                elm.sliderDiv.eq(index).addClass('active').siblings().removeClass('active'); //点击Li时 改变图片的位置
+                elm.index = index;
             });
         }.bind(this);
 

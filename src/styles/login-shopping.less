@@ -1,0 +1,737 @@
+@charset 'utf-8';
+
+
+#home{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #232628;
+    font-family: "Microsoft Yahei", "微软雅黑", verdana;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+//头部导航
+.top-nav{
+    background-color: #F3F5F7;
+    width: 100%;
+    height: 40px;
+    .nav-box{
+        width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        li{
+            padding: 0 16px;
+            float: left;
+            line-height: 40px;
+            position: relative;
+            a{
+                color: #71797F;
+                font-size: 12px;
+            }
+            span{
+                color: #71797F;
+                font-size: 12px;
+            }
+        }
+        //左侧导航
+        .nav-left{
+            list-style: none;
+            float: left;
+            li{
+                a{
+                    .icon{
+                        width: 14px;
+                        height: 14px;
+                        margin-top: 12px;
+                        margin-right: 4px;
+                        display: inline-block;
+                        background-image: url(//img02.hua.com/pc/pimg/home/common_sprite.png);
+                        background-repeat: no-repeat;
+                        vertical-align: top;
+                        background-position: 0 -21px;
+                    }
+                    .next{
+                        background-position: -24px -21px;
+                    }
+                    .last{
+                        background-position: -48px -21px;
+                    }
+                }
+                img{
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: -1px;
+                    min-width: 160px;
+                    padding: 12px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #232628;
+                    background: #fff;
+                    border: 1px solid #E9ECF0;
+                    border-top-color: transparent;
+                    text-align: center;
+                    z-index: 1000;
+                }
+                &:hover{
+                    img{
+                        display: block;
+                    }
+                    &:not(:first-child){
+                        background: white;
+                    }
+                    a{
+                        color: #FF734C;
+                    }
+                }
+            }
+            :first-child{
+                padding-left: 0;
+            }
+        }
+        //左侧导航 over
+        //右侧导航
+        .nav-right{
+            list-style: none;
+            float: right;
+            .icon-box{
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                margin-left: 5px;
+                background-image: url(http://img02.hua.com/pc/pimg/home/top_nav_arrow.png);
+                background-position: top center;
+                background-size: 8px 8px;   
+                transition: transform 0.2s;
+            }
+            .img{
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: -1px;
+                font-size: 12px;
+                line-height: 18px;
+                color: #232628;
+                background: #fff;
+                border: 1px solid #E9ECF0;
+                border-top-color: transparent;
+                text-align: center;
+                z-index: 1000;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                padding: 6px 0;
+                p{
+                    display: block;
+                    font-size: 12px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: #71797F;
+                    cursor: pointer;
+                    &:hover{
+                        color: #FF734C;
+                    }
+                }
+            }
+            li:first-child{
+                padding: 0;
+            }
+            li:hover{
+                a{
+                    color: #FF734C;
+                }
+                .img{
+                    display: block;
+                   
+                }
+                .icon-box{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        //右侧导航over
+    }
+}
+//头部导航  over
+
+
+ //搜索栏
+#header{
+    // background: #F7F9FA;
+    height: 120px;
+    .header-contener{
+        margin: 0 auto;
+        width: 1200px;
+        height: 100%;
+        position: relative;
+      //logo
+        .logo{
+            float: left;
+            width: 238px;
+            height: 100%;
+        }
+        .logo{
+            width: 238px;
+            height: 60px;
+            margin-top: 30px;
+            background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+            background-repeat: no-repeat;
+            background-position: 0 -248px;
+        }
+        //logo over
+        //form 搜索
+        .search-box{
+            width: 440px;
+            margin: 0 auto;
+            padding-top: 25px;
+            font-size: 0;
+            form{
+                display: block;
+                margin-top: 0;
+                div{
+                    position: relative;
+                    width: 440px;
+                    height: 48px;
+                    border-radius: 24px;
+                    border: 2px solid #FF734C;
+                    overflow: hidden;
+                    //图标
+                    .search-box-icon{
+                        display: inline-block;
+                        width: 54px;
+                        height: 100%;
+                        vertical-align: top;
+                        text-align: center;
+                        border-style: none;
+                        span{
+                            width: 16px;
+                            height: 16px;
+                            margin-top: 16px;
+                            display: inline-block;
+                            background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                            background-repeat: no-repeat;
+                            vertical-align: top;
+                            background-position: 0 -48px;
+                        }
+                    }
+                    //图标over
+                    //input
+                    input{
+                        width: 264px;
+                        height: 100%;
+                        font-size: 14px;
+                        border: none;
+                        background-color: inherit;
+                    }
+                    //input  over
+                                 //搜索提交按钮
+              .btn-box{
+                position: absolute;
+                top: -2px;
+                right: -2px;
+                width: 118px;
+                height: 48px;
+                .btn{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 24px 0 0 24px;
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: bold;
+                    background-color: #FF734C;
+                    color: white;
+                    border-style: none;
+                }
+            }
+            //搜索提交按钮  over
+                }
+            }
+        }
+        .search-box-hotwords{
+            margin-top: 8px;
+            margin-left: 44px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #B4BABF;
+            a{
+                margin: 0 12px;
+                color: #71797F;
+            }
+        }
+        //form over
+        // 客服
+        .help{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 350px;
+            padding-top: 25px;
+            line-height: 18px;
+            text-align: right;
+            .help-item{
+                display: inline-block;
+                font-size: 14px;
+                color: #71797F;
+                vertical-align: top;
+                .icon{
+                    width: 24px;
+                    height: 24px;
+                    margin-top: 12px;
+                    margin-right: 8px;
+                    display: inline-block;
+                    background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
+                    background-repeat: no-repeat;
+                    vertical-align: top;
+                }
+                .icon-phone{
+                    background-position: 0 -102px;
+                }
+                .icon-ready{
+                    background-position: -34px -102px;
+                }
+                p{
+                    display: inline-block;
+                    margin-top: 15px;
+                    vertical-align: top;
+                    text-align: left;
+                }
+                &+.help-item{
+                    margin-left: 40px;
+                }
+            }
+        }
+        // 客服 over
+    }
+}
+//搜索栏  over
+
+//购物车
+.container{
+    width: 990px;
+    max-width: none !important;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    //订单列表
+    .shop{
+        margin-bottom: 20px;
+        border: 1px solid #d9d9d9;
+        .order-list li {
+            line-height: 20px;
+            display: inline-block;
+            float: left;
+        }
+        .hd{
+            margin: 0;
+            height: 80px;
+            width:100%;
+            padding: 0 20px;
+            list-style: none;
+            background-color: #ebebeb;
+           ul{
+               li{
+                //    float: left;
+                   height: 80px;
+                   width: 950px/5.5;
+                   margin-left: 8px;
+                   color: gray;
+                   margin-top: 10px;
+                   
+                line-height: 20px;
+                display: inline-block;
+               }
+               .one{
+                float: right;
+                margin-top: 45px;
+                width: 50px;
+            }
+            .two{
+             margin-right: 150px;
+         }
+               
+              
+           }
+        }
+        .shop-box{
+            margin: 0;
+            padding: 0 20px;
+            height: 196px;
+            // width: 100%;
+            .order-list{
+                font-size: 14px;
+                margin: 0;
+                padding: 15px 0;
+                list-style: none;
+                font-size: 14px;
+                li{
+                    line-height: 20px;
+    display: inline-block;
+                }
+               
+                .selecter{
+                    width: 36px;
+                    height: 88px;
+                    text-align: left;
+                    cursor: pointer;
+                    .icon-select{
+                        width: 20px;
+                        height: 20px;
+                        margin-top: 34px;
+                        display: inline-block;
+                    }
+                }
+                .img-box{
+                    width: 100px;
+                    a{ 
+                        color: #737373;
+                        text-decoration: none;
+                        background-color: transparent;
+                    }
+                    img{
+                        width: 80px;
+                        height: 88px;
+                    }
+                }
+                .product{
+                    width: 332px;
+                    padding: 24px 0;
+                    a {
+                        color: #737373;
+                        text-decoration: none;
+                        background-color: transparent;
+                        span{
+                            display: block;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            
+                        }
+                        .feature {
+                            color: #ff6a00;
+                        }
+                    }
+                }
+                .market-price{
+                    width: 120px;
+                    padding: 0;
+                    line-height: 88px;
+                    text-decoration: line-through;
+                    color: #999999;
+                    text-align: center;
+                    .price-sign {
+                        font-family: arial;
+                        margin-right: -4px;
+                    }
+                    .price-num {
+                        font-family: arial,Verdana,Arial;
+                    }
+                }
+                .order-price{
+                    width: 120px;
+                    padding: 0;
+                    line-height: 88px;
+                    color: #232628;
+                    font-weight: normal;
+                    .price-sign {
+                        font-family: arial;
+                        margin-right: -4px;
+                    }
+                    .price-num {
+                        font-family: arial,Verdana,Arial;
+                    }
+                }
+                .num{
+                    width: 120px;
+                    margin: 32px 0;
+                    text-align: center;
+                    .input-num {
+                        width: 80px;
+                        margin: 0 auto;
+                        // input[type="number"] {
+                        //     -moz-appearance: textfield;
+                        // }
+                        input[type=number]::-webkit-inner-spin-button
+                        // input[type=number]::-webkit-outer-spin-button 
+                        {
+                          -webkit-appearance: none;
+                          margin: 0;
+                        }
+                        .form-control {
+                            
+                            display: inline-block;
+                            width: 40px;
+                            height: 24px;
+                            border-color: #d9d9d9;
+                            padding: 6px;
+                            border-radius: 0;
+                            box-shadow: none;
+                            color: #4d4d4d;
+                            background-color: #ffffff;
+                            background-image: none;
+                            border: 1px solid #d2d2d2;
+                            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                        }
+                        .input-sm {
+                            font-size: 12px;
+                            line-height: 1.5;
+                        }
+                       
+                        .ico{
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        .ico-minus {
+                            background-image: url(http://img02.hua.com/pc/assets/img/common_z.png);
+                            background-position: -274px -234px;
+                            background-repeat: no-repeat;
+                            width: 9px;
+                            height: 9px;
+                        }
+                        .ico-add{
+                            background-image: url(http://img02.hua.com/pc/assets/img/common_z.png);
+                            background-position: -396px -239px;
+                            background-repeat: no-repeat;
+                            width: 9px;
+                            height: 9px;
+                        }
+                        .btn-default {
+                            color: #4d4d4d;
+                            background-color: #ffffff;
+                            border-color: #d9d9d9;
+                        }
+                        .btn {
+                            width: 11px;
+                            height: 11px;
+                            margin: -2px 0 0;
+                            padding: 0;
+                            border-radius: 0;
+                            font-size: 14px;
+                            line-height: 1.42857143;
+                            background-image: none;
+                            border: 1px solid transparent;
+                            white-space: nowrap;
+                            touch-action: manipulation;
+                            font-weight: normal;
+                            text-align: center;
+                            vertical-align: middle;
+                            display: inline-block;
+                            color: #4d4d4d;
+                            background-color: #ffffff;
+                            border-color: #d9d9d9;
+                            i {
+                                margin-top: -13px;
+                            }
+                        }
+                        .btn.no {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .operate{
+                    width: 120px;
+                    font-size: 12px;
+                    padding: 24px 0 24px 42px;
+                    margin-top: 65px;
+                    float: right;
+                    a{
+                        color: #737373;
+                    }
+                }
+                &:first-child {
+                    border-top: none;
+
+                }
+            }
+       }
+    }
+    //订单列表 over
+}
+//购物车over
+
+//结算框
+    .set-bar{
+        width: 990px;
+        max-width: none !important;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+        height: 52px;
+        .result{
+            float: left;
+            .bar-box{
+                font-size: 12px;
+                line-height: 52px;
+                float: left;
+                width: 870px;
+                height: 52px;
+                padding-left: 20px;
+                border: 1px solid #d9d9d9;
+                border-right: 0;
+                a{
+                    // display: block;
+                    // height: 100%;
+                //    line-height: 52px;
+                    width: 90px;
+                   float: left;
+                   color: #737373;
+                    text-decoration: none;
+                    .ico{
+                        margin-top: -6px;
+                        margin-right: 5px;
+                        background-image: url(http://img02.hua.com/pc/assets/img/common_z.png);
+                    }
+                    .ico-back{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 22px;
+                        height: 22px;
+                        background-repeat: no-repeat;
+                        background-position: -68px -318px;
+                    }
+                }
+                p{
+                    font-size: 15px;
+                    // line-height: 25px;
+                    // width: 200px;
+                    text-align: right;
+                    span{
+                        color: red;
+                        font-size: 20px;
+                    }
+                }
+            }
+           
+           
+        }
+        .btn{
+            font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+    font-weight: bold;
+    float: right;
+    width: 120px;
+    height: 52px;
+    padding: 10px 16px;
+    margin-left: 5px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    color: #ffffff;
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+            &:last-child{
+                margin: 0;
+                margin-top: 1px;
+            }
+        }
+       
+    }
+//结算框over
+.all-bar{
+    width: 920px;
+    max-width: none !important;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    height: 52px;
+    .result{
+        float: left;
+        .bar-box{
+            font-size: 12px;
+            line-height: 52px;
+            float: left;
+            width: 870px;
+            height: 52px;
+            padding-left: 20px;
+            border: 1px solid #d9d9d9;
+            border-right: 0;
+            a{
+                // display: block;
+                // height: 100%;
+            //    line-height: 52px;
+                width: 90px;
+               float: left;
+               color: #737373;
+                text-decoration: none;
+                .ico{
+                    margin-top: -6px;
+                    margin-right: 5px;
+                    background-image: url(http://img02.hua.com/pc/assets/img/common_z.png);
+                }
+                .ico-back{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 22px;
+                    height: 22px;
+                    background-repeat: no-repeat;
+                    background-position: -68px -318px;
+                }
+            }
+            p{
+                font-size: 15px;
+                // line-height: 25px;
+                // width: 200px;
+                text-align: right;
+                span{
+                    color: red;
+                    font-size: 20px;
+                }
+            }
+        }
+       
+       
+    }
+    .btn{
+        font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+font-weight: bold;
+float: right;
+width: 120px;
+height: 52px;
+padding: 10px 16px;
+margin-left: 5px;
+font-size: 18px;
+line-height: 1.3333333;
+color: #ffffff;
+background-color: #ff6a00;
+border-color: #ff6a00;
+display: inline-block;
+margin-bottom: 0;
+text-align: center;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+white-space: nowrap;
+        &:last-child{
+            margin: 0;
+            margin-top: 1px;
+        }
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+    //尾部
+
+  
+            // 尾部导航over
+}

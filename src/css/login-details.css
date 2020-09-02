@@ -376,23 +376,18 @@
 }
 #home .product-wrap .product-intro .product-preview .preview .preview-bigimage .swiper-container {
   height: 100%;
+  position: relative;
 }
 #home .product-wrap .product-intro .product-preview .preview .preview-bigimage .swiper-container .swiper-slide {
-  position: relative;
-  float: left;
+  position: absolute;
+  display: none;
 }
 #home .product-wrap .product-intro .product-preview .preview .preview-bigimage .swiper-container .swiper-slide img {
   width: 100%;
   vertical-align: middle;
 }
-#home .product-wrap .product-intro .product-preview .preview .preview-bigimage .swiper-slide-active img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
+#home .product-wrap .product-intro .product-preview .preview .preview-bigimage .swiper-container .swiper-slide-active {
+  display: block;
 }
 #home .product-wrap .product-intro .product-preview .preview .preview-list {
   height: 80px;
@@ -666,7 +661,6 @@
   background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
   background-repeat: no-repeat;
   vertical-align: top;
-  float: right;
 }
 #home .product-wrap .product-intro .delivery .delivery-item .delivery-address .delivery-area span.icon-deliarr {
   background-position: 0 -403px;

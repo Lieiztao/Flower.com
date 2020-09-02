@@ -190,7 +190,7 @@
   background: #FF734C;
 }
 #home .login-wrapper .container .login-box .phone {
-  display: block;
+  display: none;
   min-height: 280px;
   padding: 20px 24px 0;
   color: #737373;
@@ -284,7 +284,7 @@
   line-height: 34px;
 }
 #home .login-wrapper .container .login-box .phone .code-box .tips {
-  display: block;
+  display: none;
   padding-left: 40px;
   height: 18px;
   margin: 4px 0;

@@ -7,6 +7,7 @@
     <title>注册页面</title>
     <link rel="stylesheet" href="../styles/css/login-flower.css">
     <link rel="stylesheet" href="../styles/css/common.css">
+    <script src="../js/signup.js" type="module"></script>
 </head>
 
 <body>
@@ -86,13 +87,13 @@
             <div class="container">
                 <div class="login-box">
                     <ul class="login-tabs">
-                        <li class="by-phone active">手机账号注册</li>
-                        <li class="by-email">邮箱账号注册</li>
+                        <li class="by-phone ">手机账号注册</li>
+                        <li class="by-email active">邮箱账号注册</li>
                     </ul>
                     <!-- form表单 -->
                     <div class="form1">
                         <!-- 手机注册 -->
-                        <div class="phone" style="display: block;">
+                        <div class="phone" style="display: none;">
                             <div class="tel-box">
                                 <div class="input-box">
                                     <span class="icon icon-iphone"></span>
@@ -135,25 +136,27 @@
                         </div>
                         <!-- 手机注册 End -->
                         <!-- 邮箱注册 -->
-                        <div class="email" style="display:none">
-                            <div class="email-box">
-                                <!-- 邮箱验证 -->
-                                <div class="input-box">
-                                    <span class="icon icon-email"></span>
-                                    <input id="email" name="email" class="account" type="text" placeholder="请输入邮箱" autocomplete="off">
+                        <form action="../../interface/registered.php" method="POST">
+                            <div class="email" style="display:block">
+                                <div class="email-box">
+                                    <!-- 邮箱验证 -->
+                                    <div class="input-box">
+                                        <span class="icon icon-email"></span>
+                                        <input id="email" name="email" class="account" type="text" placeholder="请输入邮箱" autocomplete="off" data-pass="false">
+                                    </div>
+                                    <p class="tips"></p>
                                 </div>
-                                <p class="tips"></p>
-                            </div>
 
-                            <div class="pwd-box">
-                                <div class="input-box">
-                                    <span class="icon icon-unlocked"></span>
-                                    <input id="phonePassWord" name="phonePassWord" class="pwd pwd-input" type="text" placeholder="请输入密码" onfocus="this.type='password'" autocomplete="off">
+                                <div class="pwd-box">
+                                    <div class="input-box">
+                                        <span class="icon icon-unlocked"></span>
+                                        <input id="phonePassWord" name="phonePassWord" class="pwd pwd-input" type="text" placeholder="请输入密码" onfocus="this.type='password'" autocomplete="off" data-pass="false">
+                                    </div>
+                                    <p class="tips"></p>
                                 </div>
-                                <p class="tips"></p>
+                                <input class="form-btn login-btn" type="submit" value="注册" id="checkpass" disabled="disabled">
                             </div>
-                            <input class="form-btn login-btn" type="button" value="注册" onclick="phoneRegister();">
-                        </div>
+                        </form>
                         <!-- 链接列表 -->
                         <div class="bottom-box">
                             <ul class="other-login-ways">

@@ -2,8 +2,7 @@
 import $ from './lib/jquery.js';
 import './lib/jquery-slider.js';
 import './lib/jqury-lazyload.js';
-import IndexRender from './lib/indexRender'
-IndexRender.init()
+
 $('.sliders').slider();
 
 
@@ -21,3 +20,35 @@ $("img.lazy").lazyload({
     // failurelimit: 10 // 图片排序混乱时
     // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
 });
+
+(function() {
+    $.ajax({
+        type: "get",
+        url: "../../interface/getproduct.php",
+        dataType: "json",
+        success: function(res) {
+            let temp = '';
+            res.forEach((elm, i) => {
+                let title = JSON.parse(elm.title);
+                let pic = JSON.parse(elm.picture);
+                temp += `                       <div class="fl-products-item">
+                <a href="../html/login-details.html?id=${elm.id}">
+                    <div class="img-box" href="javascript:;">
+                        <img  src="${pic[0].src}" style="display: inline;">
+                    </div>
+                    <div class="product-content">
+                        <p class="product-title">${title[0].title}</p>
+                        <p class="product-price">
+                            <span class="price-sign">¥</span>
+                            <span class="price-num" data-pp="9010966">${elm.price}</span>
+                        </p>
+                        <p class="product-sell">已售 ${elm.num}万 件</p>
+                    </div>
+                </a>
+            </div>
+                `;
+            });
+            $('.fl-wrapper>.f-lover>.fl-container>.bd>.fl-products').append(temp);
+        }
+    });
+})();

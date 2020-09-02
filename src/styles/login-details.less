@@ -417,24 +417,23 @@
                         border: 1px solid #E9ECF0;
                         .swiper-container {
                             height: 100%;
+                            position: relative;
                             .swiper-slide {
-                                position: relative;
-                                float: left;
+                                // float: left;
+                                position: absolute;
+                                
+                                display: none;
                                 img{
                                     width: 100%;
                                     vertical-align: middle;
+                                   
                                 }
                             }
+                            .swiper-slide-active {
+                                display: block;
+                              }
                         }
-                        .swiper-slide-active img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            margin: auto;
-                            width: 100%;
-                        }
+                       
                     }
                     //大图over
                     //tabs
@@ -731,7 +730,7 @@
                                 background-image: url(http://img02.hua.com/pc/pimg/home/common_sprite.png);
                                 background-repeat: no-repeat;
                                 vertical-align: top;
-                                float: right;
+                                // float: right;
                             }
                             span.icon-deliarr {
                                 background-position: 0 -403px;
