@@ -1,12 +1,16 @@
 import $ from './jquery.js';
 import { cookie } from './cookie.js';
+import addItem from '../lib/jquery.cookie.js';
 let result = function() {
     $('.form-control').on('input', function() {
         let price1 = $(this).parents('.order-list').children('.order-price').children('.price-num').html();
         // $('.total').html($(this).val() * price1)
         let index = $(this).parents('.order-list').attr('class').split(' ')[1].charAt(1);
-        $(`.total${index}`).html($(this).val() * price1);
-
+        $(`.total${index}`).html('￥' + $(this).val() * price1 + '.00');
+        let that = this;
+        yuan();
+        console.log(price1)
+        addItem(index, price1, $(that).val());
     })
 }
 
@@ -25,15 +29,15 @@ let no = function() {
             $(`.int${index}`).val(num1);
         }
         getPrice().each((i, item) => {
-                if ($(item).parents('.order-list').attr('class').split(' ')[1].charAt(1) == index) {
-                    price = $(item).html()
-                }
-            })
-            // console.log(price)
-
+            if ($(item).parents('.order-list').attr('class').split(' ')[1].charAt(1) == index) {
+                price = $(item).html()
+            }
+        })
 
         $(`.int${index}`).val(num1);
-        $(`.total${index}`).html(`￥${(num1 * price)}`);
+        $(`.total${index}`).html(`￥${(num1 * price)}.00`);
+        addItem(index, $(`.int${index}`).val(), num1);
+        yuan();
 
 
     })
@@ -60,7 +64,10 @@ let add = function() {
 
 
             $(`.int${index}`).val(num);
-            $(`.total${index}`).html(`￥${num*price}`);
+            $(`.total${index}`).html(`￥${num*price}.00`);
+            addItem(index, $(`.int${index}`).val(), num);
+            yuan();
+
         })
     }
     //删除元素及cookie
@@ -76,7 +83,6 @@ let removeCookie = function() {
                     if ($(elm).prop("checked") == true) {
                         $(`.box${index}`).remove();
                         $(`.box1${index}`).remove();
-                        console.log(shop)
                         let num = shop.forEach((val, i) => {
                             if (index == val.id) {
                                 return shop.indexOf(val);
@@ -85,6 +91,7 @@ let removeCookie = function() {
                         shop.splice(num, 1);
                         let str = JSON.stringify(shop);
                         cookie.set('shop', str, 1);
+                        yuan();
                     }
                 })
             }
@@ -110,14 +117,33 @@ let removebtn = function() {
     $('.selecter .icon-select').attr("checked", false);
     $(removebtn).on('click', function() {
         $('.selecter .icon-select').each((i, val) => {
-            // console.log(val);
             let index = $(val).parents('.order-list').attr('class').split(' ')[1].charAt(1);
             if ($(val).prop("checked") == true) {
-                cookie.remove('shop');
+                let shop = cookie.get('shop');
+                shop = JSON.parse(shop);
+                let num = shop.forEach((val, i) => {
+                    if (index == val.id) {
+                        return shop.indexOf(val);
+                    }
+                })
+                shop.splice(num, 1);
+                let str = JSON.stringify(shop);
+                cookie.set('shop', str, 1);
                 $($(val).parents('.container')).remove();
                 $(`.box1${index}`).remove();
+                yuan();
             }
         })
     })
+
 }
-export { result, add, no, removeCookie, allbtn, removebtn };
+
+let yuan = function() {
+    let num = 0;
+    $('.course').each((i, val) => {
+            num += parseInt($(val).html().split("￥")[1]);
+        })
+        // console.log(num)
+    $('#total').html('￥' + num + '.00');
+}
+export { result, add, no, removeCookie, allbtn, removebtn, yuan };

@@ -1,6 +1,7 @@
 import $ from './lib/jquery.js';
 import { cookie } from './lib/cookie.js';
-import { result, no, add, removeCookie, allbtn, removebtn } from './lib/jquery-result.js';
+import addItem from './lib/jquery.cookie.js';
+import { result, no, add, removeCookie, allbtn, removebtn, yuan } from './lib/jquery-result.js';
 
 (function() {
     let shop = cookie.get('shop');
@@ -24,10 +25,9 @@ import { result, no, add, removeCookie, allbtn, removebtn } from './lib/jquery-r
 
                     let picture = JSON.parse(elm.picture);
                     let title = JSON.parse(elm.title);
-
+                    // console.log(elm.num)
                     let arr = shop.filter(val => val.id == elm.id);
-
-
+                    console.log(arr[0].num)
                     template += `
                     <div class="container box${elm.id}">
                     <div class="shop">
@@ -70,12 +70,12 @@ import { result, no, add, removeCookie, allbtn, removebtn } from './lib/jquery-r
                             </li>
                             <li class="num">
                                 <div class="input-num ">
-                                    <a href="javascript:void(0);" class="btn btn-default no "><i class="ico ico-minus"></i></a>
-                                    <input type="number" class="form-control input-sm int${elm.id}" name="cpsl " value="1" maxlength="3" min="1">
-                                    <a href="javascript:void(0)" class="btn btn-default add"><i class="ico ico-add"></i></a>
+                                    <a href="javascript:;" class="btn btn-default no "><i class="ico ico-minus"></i></a>
+                                    <input type="number" class="form-control input-sm int${elm.id}" name="cpsl " value="${arr[0].num}" maxlength="3" min="1">
+                                    <a href="javascript:" class="btn btn-default add"><i class="ico ico-add"></i></a>
                                 </div>
                             </li>
-                            <li class="operate"><a href="javascript:void(0)" class="delBtn${elm.id}">删除</a><br><a href="javascript:void(0)" class="collectBtn">移到我的收藏</a></li>
+                            <li class="operate"><a href="javascript:" class="delBtn${elm.id}">删除</a><br><a href="javascript:;" class="collectBtn">移到我的收藏</a></li>
                         </ul>
                     </div>
                 </div>
@@ -83,18 +83,19 @@ import { result, no, add, removeCookie, allbtn, removebtn } from './lib/jquery-r
                 <div class="set-bar box1${elm.id}">
                 <div class="result">
                     <div class="bar-box">
-                        <a href="javascript:;">
+                        <a href="../html/login-index.html">
                             <span class="ico ico-back"></span> 继续选购
                         </a>
-                        <p>应付金额:<span class="total${elm.id}">￥${(elm.price*arr[0].num).toFixed(2)}</span></p>
+                        <p>应付金额:<span class="total${elm.id} course">￥${(elm.price*arr[0].num).toFixed(2)}</span></p>
                     </div>
                 </div>
                 <button class="btn">去结算</button>
             </div>
                 `;
                 });
-                $('.all-bar').before(template);
 
+                $('.all-bar').before(template);
+                yuan();
                 add();
                 no();
                 result();

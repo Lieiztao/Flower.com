@@ -5,11 +5,11 @@ include('./conn.php');
 
 //接收前端传输的数据
 $email = $_REQUEST['email'];
-$password = $_REQUEST['phonePassWord'];
+$password = sha1($_REQUEST['phonePassWord']);
 
 //SQL 语句  查询userx这个表中是否存在当前传输过来的数据
 $sql = "select * from flower where email='$email' and password='$password'";
-
+ 
 //执行sql语句
 $result = $mysqli->query($sql);
 

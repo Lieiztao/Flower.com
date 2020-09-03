@@ -5,9 +5,8 @@ include('./conn.php');
 
 //接受前端数据
 $email = $_REQUEST['email'];
-$password = $_REQUEST['phonePassWord'];
-
-
+$password =sha1( $_REQUEST['phonePassWord']);
+ 
 
 //验证用户名是否存在
 $sql = "select * from flower where email='$email'";
