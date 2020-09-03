@@ -7,7 +7,7 @@ $(function() {
 
     // console.log($(".phone input"))
     $(".email input").each(function(index, elm) {
-        console.log(elm)
+        // console.log(elm)
         if ($(elm).attr("id") === "checkpass") return;
         $(elm).on("input", function() {
             if (reg[$(elm).attr("id")].test($(elm).val())) {

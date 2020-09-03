@@ -1324,6 +1324,149 @@
         // 右侧 over
     }
     //详情渲染 over
+    .mui-mbar-tabs {
+        position: fixed;
+        z-index: 9;
+        right: 0;
+        bottom: 0;
+        transition: width linear .4s;
+        i{
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            vertical-align: top;
+            background: url(http://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+        }
+        .quick_links_wrap{
+            position: fixed;
+            z-index: 9;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            transition: width linear .4s;
+            .quick_links_panel {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                right: 0;
+                width: 34px;
+                height: 100%;
+                background-color: #595656;
+                .quick_links {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    margin-top: -190px;
+                    *margin-top: -220px;
+                    z-index: 2;
+                    width: 34px;
+                    li{
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        margin-top: 10px;
+                        a {
+                            font-size: 12px;
+                            position: relative;
+                            z-index: 1;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            overflow: hidden;
+                            width: 36px;
+                            height: 36px;
+                            margin: 0;
+                            padding: 0;
+                            color: #d8d8d8;
+                            .ico_user{
+                                background-position: 0 0;
+                            }
+                            .ico_collect{
+                                background-position: 0 -72px;
+                            }
+                            .ico_histroy{
+                                background-position: 0 -108px;
+                            }
+                            .ico_phone{
+                                background-position: 0 -144px;
+                            }
+                            .ico_headset{
+                                background-position: 0 -180px;
+                            }
+                            .message_list {
+                                line-height: 16px;
+                                height: 133px;
+                                margin: 10px 0;
+                                color: #fff;
+                                background: url(http://img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+                                background-position: -36px -216px;
+                                .cart_num {
+                                    line-height: 21px;
+                                    display: block;
+                                    width: 21px;
+                                    height: 21px;
+                                    margin: 9px 0 0 8px;
+                                    cursor: pointer;
+                                    text-align: center;
+                                    color: #fff;
+                                    border-radius: 50%;
+                                    background: #ff6600;
+                                }
+                                .span {
+                                    width: 16px;
+                                    display: block;
+                                    height: 48px;
+                                    margin: 38px 0 0 13px;
+                                    cursor: pointer;
+                                }
+                            }
+                            .ico_cart{
+                                background-position: 0 -36px;
+                            }
+                          
+                        }
+                    }
+                }
 
+                .quick_toggle{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 36px;
+                    z-index: 1;
+                    .ico_gotop{
+                        background-position: 0 -252px;
+                    }
+                    .quick_toggle li {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        margin-top: 10px;
+                        a {
+                            font-size: 12px;
+                            position: relative;
+                            z-index: 1;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            overflow: hidden;
+                            width: 36px;
+                            height: 36px;
+                            margin: 0;
+                            padding: 0;
+                            color: #d8d8d8;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
 }
 // 大盒子over

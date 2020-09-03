@@ -1,6 +1,5 @@
 import $ from "./lib/jquery.js";
 import './lib/jquerymd5.js';
-// console.log($.md5('1234'))
 $(function() {
     let reg = {
         email: /(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)/,
@@ -27,7 +26,6 @@ $(function() {
         });
 
     });
-
     // $("#phonePassWord").on("input", function() {
     //     if ($(this).val() === $("#phonePassWord").val()) {
     //         $(this).css({

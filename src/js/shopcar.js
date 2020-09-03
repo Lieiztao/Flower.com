@@ -27,7 +27,7 @@ import { result, no, add, removeCookie, allbtn, removebtn, yuan } from './lib/jq
                     let title = JSON.parse(elm.title);
                     // console.log(elm.num)
                     let arr = shop.filter(val => val.id == elm.id);
-                    console.log(arr[0].num)
+                    console.log(arr[0])
                     template += `
                     <div class="container box${elm.id}">
                     <div class="shop">
